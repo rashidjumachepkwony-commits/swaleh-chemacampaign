@@ -652,6 +652,8 @@
         }
         .modal-image {
             position: relative;
+            background: #ddd3cb;
+            min-height: 200px;
         }
         .modal-image img {
             width: 100%;
@@ -931,44 +933,93 @@
     <!-- modal -->
     <div class="modal" id="articleModal" onclick="closeArticle(event)">
         <div class="modal-box" onclick="event.stopPropagation()">
-            <div class="modal-image"><img id="modalImage" src="" alt=""><button class="modal-close" onclick="closeArticle()">×</button></div>
-            <div class="modal-body"><span class="tag">TNCC Story</span><h2 id="modalTitle"></h2><p id="modalText"></p><div class="modal-share"><span style="font-weight:600;color:#5f5a55;">Share:</span><a href="#" class="share-btn twitter" onclick="shareModal('Twitter')">🐦 Twitter</a><a href="#" class="share-btn facebook" onclick="shareModal('Facebook')">📘 Facebook</a><a href="#" class="share-btn whatsapp" onclick="shareModal('WhatsApp')">💬 WhatsApp</a></div></div>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Story image" onerror="this.src='swaleh main picture.jpg'">
+                <button class="modal-close" onclick="closeArticle()">×</button>
+            </div>
+            <div class="modal-body">
+                <span class="tag" id="modalTag">Story</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalText"></p>
+                <div class="modal-share">
+                    <span style="font-weight:600;color:#5f5a55;">Share:</span>
+                    <a href="#" class="share-btn twitter" onclick="shareModal('Twitter')">🐦 Twitter</a>
+                    <a href="#" class="share-btn facebook" onclick="shareModal('Facebook')">📘 Facebook</a>
+                    <a href="#" class="share-btn whatsapp" onclick="shareModal('WhatsApp')">💬 WhatsApp</a>
+                </div>
+            </div>
         </div>
     </div>
     <script>
         // ===== DATA =====
         const DEFAULT_STORIES = [
-            { title: 'Harvesting improved Kanga groundnuts', content: 'Today marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers. This is a big step towards food security and income generation.', tag: 'Agriculture', image: 'oday marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers.1' },
-            { title: 'Stakeholders meeting at Aloete Dispensary', content: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location. We discussed healthcare delivery, staffing, and medical supplies.', tag: 'Health', image: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location.jpg' },
-            { title: 'Public baraza at Changara Health Centre', content: 'Public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division. We tackled water, roads, and security issues.', tag: 'Community', image: 'public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division.' },
-            { title: 'Zero-grazing dairy unit visit', content: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara. We discussed milk production and market linkages.', tag: 'Agriculture', image: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara.1' }
+            { 
+                title: 'Harvesting improved Kanga groundnuts', 
+                content: 'Today marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers. This is a big step towards food security and income generation. The community came together to celebrate this achievement, and we are already planning to expand the program to more farmers in the region.', 
+                tag: 'Agriculture', 
+                image: 'oday marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers.1' 
+            },
+            { 
+                title: 'Stakeholders meeting at Aloete Dispensary', 
+                content: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location. We discussed healthcare delivery, staffing, and medical supplies. The community raised important concerns about the need for a maternity wing and 24-hour ambulance services. We are committed to addressing these issues.', 
+                tag: 'Health', 
+                image: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location.jpg' 
+            },
+            { 
+                title: 'Public baraza at Changara Health Centre', 
+                content: 'Public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division. We tackled water, roads, and security issues. Residents expressed their concerns about the poor state of roads and the need for clean water. We are working with the county government to find solutions.', 
+                tag: 'Community', 
+                image: 'public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division.' 
+            },
+            { 
+                title: 'Zero-grazing dairy unit visit', 
+                content: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara. We discussed milk production, market linkages, and the importance of quality animal feeds. The farmer shared his success story and encouraged others to adopt this model.', 
+                tag: 'Agriculture', 
+                image: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara.1' 
+            }
         ];
         const STORAGE_KEY = 'swaleh_posts';
-        function getPosts() { try { const d = localStorage.getItem(STORAGE_KEY); if (d) { const p = JSON.parse(d); return p.length ? p : DEFAULT_STORIES; } } catch {} return DEFAULT_STORIES; }
+        function getPosts() { 
+            try { 
+                const d = localStorage.getItem(STORAGE_KEY); 
+                if (d) { 
+                    const p = JSON.parse(d); 
+                    return p.length ? p : DEFAULT_STORIES; 
+                } 
+            } catch(e) { console.log('Error loading posts:', e); } 
+            return DEFAULT_STORIES; 
+        }
         function savePosts(p) { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }
-        // render
+
+        // ===== RENDER STORIES =====
         function renderWebsiteStories() {
             const posts = getPosts();
             const grid = document.getElementById('storiesGrid');
-            grid.innerHTML = posts.map((post, i) => `
+            if (!grid) return;
+            
+            grid.innerHTML = posts.map((post, i) => {
+                const imgSrc = post.image && post.image.trim() !== '' ? post.image : 'swaleh main picture.jpg';
+                return `
                 <article class="card">
-                    <div class="card-image"><img src="${post.image || 'swaleh main picture.jpg'}" alt="${post.title}" onerror="this.src='swaleh main picture.jpg'"></div>
+                    <div class="card-image">
+                        <img src="${imgSrc}" alt="${post.title}" onerror="this.src='swaleh main picture.jpg'">
+                    </div>
                     <div class="card-body">
                         <span class="card-tag">${post.tag || 'Update'}</span>
                         <h3>${post.title}</h3>
                         <p>${post.content.substring(0,120)}${post.content.length>120?'...':''}</p>
                         <a class="card-link" href="#" onclick="openArticle(event, ${i})">Read more →</a>
                         <div class="share-buttons">
-                            <a href="#" class="share-btn twitter" onclick="shareStory('Twitter','${post.title}')">🐦 Tweet</a>
-                            <a href="#" class="share-btn facebook" onclick="shareStory('Facebook','${post.title}')">📘 Share</a>
-                            <a href="#" class="share-btn whatsapp" onclick="shareStory('WhatsApp','${post.title}')">💬 WhatsApp</a>
+                            <a href="#" class="share-btn twitter" onclick="shareStory('Twitter','${post.title.replace(/'/g, "\\'")}')">🐦 Tweet</a>
+                            <a href="#" class="share-btn facebook" onclick="shareStory('Facebook','${post.title.replace(/'/g, "\\'")}')">📘 Share</a>
+                            <a href="#" class="share-btn whatsapp" onclick="shareStory('WhatsApp','${post.title.replace(/'/g, "\\'")}')">💬 WhatsApp</a>
                         </div>
                     </div>
                 </article>
-            `).join('');
+            `}).join('');
         }
 
-        // ===== GALLERY - clean curated list with reliable images =====
+        // ===== GALLERY =====
         const GALLERY_IMAGES = [
             { src: 'swaleh main picture.jpg', caption: '⚡ Swaleh Chemasuet' },
             { src: 'agriculture.jpg', caption: '🌾 Agriculture in Ang\'urai' },
@@ -991,7 +1042,7 @@
 
         function renderGallery() {
             const grid = document.getElementById('galleryGrid');
-            // pick best 6 images for clean layout, with fallback
+            if (!grid) return;
             const selected = GALLERY_IMAGES.slice(0, 6);
             grid.innerHTML = selected.map((item, idx) => `
                 <div class="gallery-item ${idx === 0 ? 'featured' : ''}">
@@ -1001,16 +1052,108 @@
             `).join('');
         }
 
+        // ===== MODAL FUNCTIONS =====
         let currentArticleIndex = 0;
-        function openArticle(e, i) { e.preventDefault(); const posts = getPosts(); const p = posts[i]; currentArticleIndex = i; document.getElementById('modalTitle').textContent = p.title; document.getElementById('modalImage').src = p.image || 'swaleh main picture.jpg'; document.getElementById('modalText').textContent = p.content; document.getElementById('articleModal').classList.add('show'); document.body.style.overflow = 'hidden'; }
-        function closeArticle(e) { if (e && e.target !== e.currentTarget) return; document.getElementById('articleModal').classList.remove('show'); document.body.style.overflow = ''; }
-        function shareStory(platform, title) { const url = window.location.href; const text = `🚀 ${title} · Swaleh Chemasuet for Ang'urai East MCA 2026 #ODM`; let shareUrl = ''; if (platform==='Twitter') shareUrl=`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`; else if(platform==='Facebook') shareUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`; else if(platform==='WhatsApp') shareUrl=`https://wa.me/?text=${encodeURIComponent(text+' '+url)}`; if(shareUrl) window.open(shareUrl,'_blank','width=600,height=500'); return false; }
-        function shareModal(platform) { const posts = getPosts(); const p = posts[currentArticleIndex]; shareStory(platform, p ? p.title : 'Swaleh Chemasuet'); return false; }
-        function toggleMenu() { document.getElementById('mainMenu').classList.toggle('open'); }
-        function closeMenu() { document.getElementById('mainMenu').classList.remove('open'); }
-        function subscribeNewsletter(e) { e.preventDefault(); const email = e.target.querySelector('input[type="email"]').value; if(email){ alert(`✅ Thank you ${email}! Updates will be sent.`); e.target.reset(); } return false; }
-        document.addEventListener('DOMContentLoaded', function(){ document.getElementById('year').textContent = new Date().getFullYear(); renderWebsiteStories(); renderGallery(); });
-        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeArticle(e); });
+        
+        function openArticle(e, index) {
+            e.preventDefault();
+            const posts = getPosts();
+            const post = posts[index];
+            if (!post) return;
+            
+            currentArticleIndex = index;
+            
+            // Set modal content
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalText = document.getElementById('modalText');
+            const modalTag = document.getElementById('modalTag');
+            
+            // Use the post's image or fallback
+            const imgSrc = post.image && post.image.trim() !== '' ? post.image : 'swaleh main picture.jpg';
+            modalImage.src = imgSrc;
+            modalImage.alt = post.title;
+            modalTitle.textContent = post.title;
+            modalText.textContent = post.content;
+            modalTag.textContent = post.tag || 'Story';
+            
+            // Show modal
+            document.getElementById('articleModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticle(e) {
+            if (e && e.target && e.target !== e.currentTarget) return;
+            document.getElementById('articleModal').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        // ===== SHARE FUNCTIONS =====
+        function shareStory(platform, title) {
+            const url = window.location.href;
+            const text = `🚀 ${title} · Swaleh Chemasuet for Ang'urai East MCA 2026 #ODM`;
+            let shareUrl = '';
+            if (platform === 'Twitter') {
+                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+            } else if (platform === 'Facebook') {
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+            } else if (platform === 'WhatsApp') {
+                shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+            }
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=500');
+            }
+            return false;
+        }
+
+        function shareModal(platform) {
+            const posts = getPosts();
+            const post = posts[currentArticleIndex];
+            if (post) {
+                shareStory(platform, post.title);
+            }
+            return false;
+        }
+
+        // ===== NAVIGATION =====
+        function toggleMenu() { 
+            const menu = document.getElementById('mainMenu');
+            if (menu) menu.classList.toggle('open');
+        }
+        
+        function closeMenu() { 
+            const menu = document.getElementById('mainMenu');
+            if (menu) menu.classList.remove('open');
+        }
+
+        // ===== NEWSLETTER =====
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const input = e.target.querySelector('input[type="email"]');
+            if (input && input.value) {
+                alert(`✅ Thank you ${input.value}! Updates will be sent.`);
+                e.target.reset();
+            }
+            return false;
+        }
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set year
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            
+            // Render content
+            renderWebsiteStories();
+            renderGallery();
+            
+            // Close modal on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeArticle(e);
+                }
+            });
+        });
     </script>
 </body>
 </html>
