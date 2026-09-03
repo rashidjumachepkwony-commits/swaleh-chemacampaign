@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Swaleh Chemasuet | Ang'urai East MCA 2026">
+    <meta name="description" content="Swaleh Chemasuet, ODM candidate for Ang'urai East MCA. A fresh voice for progress, community service and inclusive leadership.">
+    <title>Swaleh Chemasuet · Ang'urai East MCA</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f5f2f0;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+        .container {
+            width: 92%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        :root {
+            --odm-red: #ce1126;
+            --odm-dark: #1a1a2c;
+            --odm-gold: #f5b81b;
+            --odm-light: #fcf7f0;
+            --white: #ffffff;
+            --shadow: 0 12px 30px rgba(0,0,0,0.08);
+            --radius: 24px;
+        }
+        /* top bar */
+        .topbar {
+            background: var(--odm-dark);
+            color: #e0d6c8;
+            font-size: 0.75rem;
+            padding: 6px 0;
+            border-bottom: 3px solid var(--odm-gold);
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .topbar span:last-child {
+            font-weight: 600;
+            color: var(--odm-gold);
+        }
+        /* header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(206, 17, 38, 0.15);
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80px;
+            gap: 20px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .brand img {
+            width: 56px;
+            height: 56px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--odm-red);
+            background: white;
+            padding: 2px;
+        }
+        .brand-text strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--odm-dark);
+            line-height: 1.1;
+            letter-spacing: -0.3px;
+        }
+        .brand-text strong span {
+            color: var(--odm-red);
+        }
+        .brand-text small {
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--odm-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: #fce8ea;
+            padding: 2px 12px;
+            border-radius: 30px;
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .menu a {
+            padding: 8px 16px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2d2a2a;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        .menu a:hover {
+            background: var(--odm-red);
+            color: white;
+        }
+        .menu .cta {
+            background: var(--odm-red);
+            color: white;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(206, 17, 38, 0.2);
+        }
+        .menu .cta:hover {
+            background: #b00e20;
+            transform: scale(1.02);
+        }
+        .menu-btn {
+            display: none;
+            background: var(--odm-red);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+        /* hero */
+        .hero {
+            position: relative;
+            min-height: 580px;
+            display: flex;
+            align-items: flex-end;
+            background: var(--odm-dark);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26,26,44,0.88) 0%, rgba(26,26,44,0.4) 70%),
+                url('swaleh main picture.jpg') center/cover no-repeat;
+            z-index: 0;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 70px 0 60px;
+            max-width: 750px;
+            color: white;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--odm-red);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 18px;
+            border: 1px solid var(--odm-gold);
+        }
+        .hero h1 {
+            font-size: clamp(2.8rem, 8vw, 4.8rem);
+            line-height: 0.98;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        .hero h1 span {
+            color: var(--odm-gold);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 550px;
+            color: #e8ddd0;
+            margin-bottom: 28px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: var(--odm-gold);
+            color: var(--odm-dark);
+        }
+        .btn-primary:hover {
+            background: #f0c94b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(245, 184, 27, 0.3);
+        }
+        .btn-outline {
+            background: rgba(255,255,255,0.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .btn-outline:hover {
+            background: white;
+            color: var(--odm-dark);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+        .stat-item {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 8px 20px;
+            border-radius: 40px;
+        }
+        .stat-item strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+        .stat-item span {
+            font-size: 0.7rem;
+            color: #ccc2b6;
+        }
+        /* section */
+        section { padding: 70px 0; }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+        .section-header .kicker {
+            color: var(--odm-red);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.7rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--odm-dark);
+            line-height: 1.15;
+        }
+        .section-header p {
+            color: #5f5a55;
+            max-width: 480px;
+            font-size: 0.95rem;
+        }
+        /* grid stories */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 24px;
+        }
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid #eae3de;
+            transition: 0.25s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: var(--odm-gold);
+        }
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+            background: #ddd3cb;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+        .card:hover .card-image img { transform: scale(1.04); }
+        .card-body { padding: 22px 24px 24px; }
+        .card-tag {
+            background: #fce8ea;
+            color: var(--odm-red);
+            padding: 3px 14px;
+            border-radius: 40px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            color: var(--odm-dark);
+            margin: 10px 0 6px;
+        }
+        .card p { color: #5f5a55; font-size: 0.9rem; }
+        .card-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--odm-red);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        .card-link:hover { color: var(--odm-gold); }
+        /* share */
+        .share-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 14px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .share-btn.twitter { background: #1DA1F2; color: white; }
+        .share-btn.facebook { background: #1877F2; color: white; }
+        .share-btn.whatsapp { background: #25D366; color: white; }
+        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        /* feature */
+        .feature {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .feature-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .feature-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+        .feature-label {
+            position: absolute;
+            bottom: 18px;
+            left: 18px;
+            background: var(--odm-red);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border: 1px solid var(--odm-gold);
+        }
+        .feature-content h2 {
+            font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+            color: var(--odm-dark);
+            margin-bottom: 12px;
+        }
+        .feature-content > p { color: #5f5a55; margin-bottom: 20px; }
+        .feature-list {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0 28px;
+        }
+        .feature-list li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        .feature-list .check {
+            width: 26px;
+            height: 26px;
+            background: var(--odm-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .feature-list li strong { color: var(--odm-dark); display: block; }
+        .feature-list li span { color: #5f5a55; font-size: 0.9rem; }
+        /* impact */
+        .impact {
+            background: var(--odm-dark);
+            color: white;
+        }
+        .impact .section-header h2 { color: white; }
+        .impact .section-header p { color: #c9bcb0; }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .impact-card {
+            padding: 28px 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            background: rgba(255,255,255,0.03);
+            transition: 0.2s;
+        }
+        .impact-card:hover {
+            background: rgba(245, 184, 27, 0.08);
+            transform: translateY(-4px);
+            border-color: var(--odm-gold);
+        }
+        .impact-icon { font-size: 2.2rem; margin-bottom: 10px; }
+        .impact-card h3 { color: var(--odm-gold); margin-bottom: 4px; }
+        .impact-card p { color: #c9bcb0; font-size: 0.9rem; }
+        /* gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.7fr;
+            grid-auto-rows: 220px;
+            gap: 18px;
+        }
+        .gallery-item {
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            background: #d5ccc4;
+        }
+        .gallery-item:first-child { grid-row: span 2; }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+        .gallery-item:hover img { transform: scale(1.04); }
+        .gallery-caption {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            right: 14px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+        }
+        /* about */
+        .about {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-logo {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            border: 2px solid var(--odm-red);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-logo img {
+            width: min(280px, 80%);
+            border-radius: 30px;
+        }
+        .about-content p { color: #5f5a55; margin: 10px 0; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .about-box {
+            background: white;
+            border: 1px solid #eae3de;
+            border-radius: 16px;
+            padding: 14px 18px;
+        }
+        .about-box strong { color: var(--odm-dark); display: block; font-size: 0.85rem; }
+        .about-box span { font-size: 0.82rem; color: #5f5a55; }
+        /* cta */
+        .cta-section { padding-top: 20px; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--odm-dark), #2a2a42);
+            border-radius: 30px;
+            padding: 45px 50px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            border: 1px solid var(--odm-gold);
+        }
+        .cta-box .kicker { color: var(--odm-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; font-weight: 800; }
+        .cta-box h2 { color: white; font-size: clamp(1.4rem, 2.5vw, 2rem); }
+        .cta-box p { color: #c9bcb0; max-width: 600px; }
+        .cta-box .btn-primary { background: var(--odm-gold); color: var(--odm-dark); }
+        .cta-box .btn-primary:hover { background: #f0c94b; }
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 480px;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 22px;
+            border-radius: 50px;
+            border: none;
+            font-size: 0.9rem;
+            min-width: 180px;
+            outline: none;
+        }
+        .newsletter-form .btn { border-radius: 50px; padding: 12px 28px; }
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .contact-info a { color: var(--odm-gold); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        /* footer */
+        footer {
+            background: var(--odm-dark);
+            color: #c9bcb0;
+            padding: 50px 0 25px;
+            border-top: 3px solid var(--odm-gold);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 0.7fr;
+            gap: 40px;
+        }
+        .footer-brand {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .footer-brand img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--odm-gold);
+        }
+        .footer-brand strong { color: white; font-size: 0.95rem; }
+        .footer-brand small { display: block; font-size: 0.65rem; font-weight: 400; color: #a09588; }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            color: white;
+            transition: 0.2s;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-social a:hover { background: var(--odm-red); color: white; transform: translateY(-3px); }
+        footer h3 { color: white; font-size: 0.95rem; margin-bottom: 12px; }
+        footer p, footer li { font-size: 0.82rem; color: #b3a69b; }
+        footer ul { display: grid; gap: 6px; }
+        footer a:hover { color: white; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin-top: 30px;
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.72rem;
+        }
+        /* modal */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.show { display: flex; }
+        .modal-box {
+            background: white;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: auto;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        .modal-image {
+            position: relative;
+        }
+        .modal-image img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 30px 30px 0 0;
+        }
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: var(--odm-dark);
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .modal-body { padding: 28px 32px 32px; }
+        .modal-body .tag {
+            background: #fce8ea;
+            color: var(--odm-red);
+            padding: 3px 14px;
+            border-radius: 40px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .modal-body h2 { margin: 10px 0 12px; color: var(--odm-dark); }
+        .modal-body p { color: #5f5a55; }
+        .modal-share { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+        /* responsive */
+        @media (max-width: 992px) {
+            .stories-grid { grid-template-columns: 1fr 1fr; }
+            .stories-grid .card:first-child { grid-column: span 2; }
+            .feature { grid-template-columns: 1fr; }
+            .impact-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
+            .gallery-item:first-child { grid-row: auto; grid-column: span 2; }
+            .about { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .cta-box { flex-direction: column; text-align: center; padding: 35px 25px; }
+            .contact-info { justify-content: center; }
+            .newsletter-form { max-width: 100%; }
+        }
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0; right: 0;
+                background: white;
+                padding: 16px 20px;
+                flex-direction: column;
+                align-items: stretch;
+                border-radius: 0 0 24px 24px;
+                box-shadow: var(--shadow);
+                border-top: 2px solid var(--odm-red);
+            }
+            .menu.open { display: flex; }
+            .menu a { padding: 10px 14px; }
+            .menu .cta { text-align: center; }
+            .hero { min-height: 460px; }
+            .hero-content { padding: 40px 0; }
+            .hero h1 { font-size: 2.4rem; }
+            section { padding: 50px 0; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .stories-grid { grid-template-columns: 1fr; }
+            .stories-grid .card:first-child { grid-column: auto; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+            .gallery-item:first-child { grid-column: auto; }
+            .about-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .cta-box { padding: 28px 18px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .modal-image img { height: 180px; }
+            .modal-body { padding: 20px; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form input { width: 100%; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .brand img { width: 44px; height: 44px; }
+            .brand-text strong { font-size: 1rem; }
+            .feature-image img { height: 260px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- topbar -->
+    <div class="topbar">
+        <div class="container">
+            <span>⚡ SWALEH CHEMASUET · ANG'URAI EAST</span>
+            <span>#FreshLeadership · ODM 2026</span>
+        </div>
+    </div>
+    <!-- header -->
+    <header>
+        <nav class="container nav">
+            <a class="brand" href="#home">
+                <img src="swaleh main picture.jpg" alt="Swaleh Chemasuet" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23ce1126%22/><text x=%2220%22 y=%2270%22 font-size=%2250%22 fill=%22white%22>SC</text></svg>'">
+                <div class="brand-text">
+                    <strong>Swaleh <span>Chemasuet</span></strong>
+                    <small>Ang'urai East MCA · 2026</small>
+                </div>
+            </a>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="menu" id="mainMenu">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#stories" onclick="closeMenu()">Updates</a></li>
+                <li><a href="#impact" onclick="closeMenu()">Agenda</a></li>
+                <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#contact" class="cta" onclick="closeMenu()">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">● ODM · Ang'urai East · 2026</div>
+                <h1>Swaleh <span>Chemasuet</span></h1>
+                <p>A fresh voice, a servant's heart. Running for MCA to bring development, accountability and unity to Ang'urai East.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#stories">View updates →</a>
+                    <a class="btn btn-outline" href="#about">Know Swaleh</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><strong>Community</strong><span>First approach</span></div>
+                    <div class="stat-item"><strong>ODM</strong><span>Party of the people</span></div>
+                    <div class="stat-item"><strong>Vision</strong><span>Inclusive growth</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- stories -->
+    <section id="stories">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">From the field</div>
+                    <h2>Swaleh's latest updates</h2>
+                </div>
+                <p>Community engagement, development projects, and the voice of Ang'urai East.</p>
+            </div>
+            <div class="stories-grid" id="storiesGrid"></div>
+        </div>
+    </section>
+    <!-- feature -->
+    <section>
+        <div class="container feature">
+            <div class="feature-image">
+                <img src="I supervised the installation of spotlights at Changara Market, an important initiative sponsored by H.E. Dr. Arthur Odera, Deputy Governor of Busia County.latest" alt="Swaleh with community" onerror="this.src='swaleh main picture.jpg'">
+                <div class="feature-label">🤝 People first leadership</div>
+            </div>
+            <div class="feature-content">
+                <div class="kicker" style="color:var(--odm-red);text-transform:uppercase;letter-spacing:0.12em;font-size:0.7rem;font-weight:800;">Why Swaleh?</div>
+                <h2>Service, integrity, and the ODM spirit</h2>
+                <p>Swaleh Chemasuet brings energy, transparency, and a deep connection to the people of Ang'urai East. He believes in grassroots engagement, listening to every voice, and delivering tangible results.</p>
+                <ul class="feature-list">
+                    <li><span class="check">✓</span><span><strong>Youth & employment</strong> Skills training, internships and enterprise support.</span></li>
+                    <li><span class="check">✓</span><span><strong>Health & water</strong> Accessible healthcare and clean water for all.</span></li>
+                    <li><span class="check">✓</span><span><strong>Infrastructure</strong> Roads, markets, and community facilities.</span></li>
+                    <li><span class="check">✓</span><span><strong>Women & inclusion</strong> Empowering women and marginalized groups.</span></li>
+                </ul>
+                <a class="btn btn-primary" href="#about">Read full profile</a>
+            </div>
+        </div>
+    </section>
+    <!-- impact -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker" style="color:var(--odm-gold);">Agenda 2026</div>
+                    <h2>Our shared vision</h2>
+                </div>
+                <p>Built on the ODM values of social justice, democracy and inclusive development.</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card"><div class="impact-icon">🏗️</div><h3>Infrastructure</h3><p>Upgrade roads, markets, and public spaces for economic growth.</p></div>
+                <div class="impact-card"><div class="impact-icon">👩‍🌾</div><h3>Agriculture</h3><p>Support farmers with inputs, training, and market access.</p></div>
+                <div class="impact-card"><div class="impact-icon">📚</div><h3>Education</h3><p>Improve schools, bursaries, and digital literacy.</p></div>
+                <div class="impact-card"><div class="impact-icon">🩺</div><h3>Healthcare</h3><p>Equip health centers, promote maternal and child health.</p></div>
+                <div class="impact-card"><div class="impact-icon">⚡</div><h3>Youth empowerment</h3><p>Jobs, sports, talent development and mentorship.</p></div>
+                <div class="impact-card"><div class="impact-icon">🤲</div><h3>Unity & peace</h3><p>Foster coexistence, dialogue, and community cohesion.</p></div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">Captured moments</div>
+                    <h2>Swaleh in action</h2>
+                </div>
+                <p>Meeting the people, listening to concerns, and working for Ang'urai East.</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- dynamically filled -->
+            </div>
+        </div>
+    </section>
+    <!-- about -->
+    <section id="about">
+        <div class="container about">
+            <div class="about-logo">
+                <img src="swaleh main picture.jpg" alt="Swaleh Chemasuet" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22%23ce1126%22/><text x=%2235%22 y=%22120%22 fill=%22white%22 font-size=%2260%22>SC</text></svg>'">
+            </div>
+            <div class="about-content">
+                <div class="kicker" style="color:var(--odm-red);text-transform:uppercase;letter-spacing:0.12em;font-size:0.7rem;font-weight:800;">Who is Swaleh?</div>
+                <h2>A leader rooted in community</h2>
+                <p>Swaleh Chemasuet is a community mobilizer, youth leader, and a proud ODM member. He has spent years working with farmers, women groups, and youth forums in Ang'urai East. His vision is to bridge the gap between the people and the county government, ensuring that resources are used transparently and effectively.</p>
+                <p>As a first-time candidate, Swaleh brings fresh energy, a listening ear, and a commitment to servant leadership. He believes in the ODM philosophy of <strong>"Inclusivity, Integrity, and Development"</strong>.</p>
+                <div class="about-grid">
+                    <div class="about-box"><strong>✅ ODM candidate</strong><span>Ang'urai East MCA 2026</span></div>
+                    <div class="about-box"><strong>🌟 Vision</strong><span>Prosperous, united ward</span></div>
+                    <div class="about-box"><strong>📢 Motto</strong><span>Service above self</span></div>
+                    <div class="about-box"><strong>🤝 Focus</strong><span>Youth, women & farmers</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-box">
+                <div>
+                    <div class="kicker">Join the movement</div>
+                    <h2>Swaleh for Ang'urai East</h2>
+                    <p>Together we can build a better future. Reach out, share your ideas, and let's make Ang'urai East a model ward.</p>
+                    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                        <input type="email" placeholder="Enter your email for updates" required>
+                        <button type="submit" class="btn btn-primary">Subscribe →</button>
+                    </form>
+                    <div class="contact-info">
+                        <a href="tel:0728682749">📞 0728 682 749</a>
+                        <a href="tel:0182095270">📞 0182 095 270</a>
+                        <a href="mailto:swaleh@anguraieast.org">✉️ Email Swaleh</a>
+                    </div>
+                </div>
+                <a class="btn btn-primary" href="tel:0728682749" style="flex-shrink:0;">Call Swaleh →</a>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="swaleh main picture.jpg" alt="Swaleh" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23ce1126%22/><text x=%2220%22 y=%2265%22 fill=%22white%22 font-size=%2230%22>SC</text></svg>'">
+                        <div><strong>Swaleh Chemasuet</strong><small>Ang'urai East MCA candidate</small></div>
+                    </div>
+                    <p>A people-driven campaign rooted in ODM values. Let's unite for progress.</p>
+                    <div class="footer-social">
+                        <a href="#">🐦</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">▶️</a>
+                    </div>
+                </div>
+                <div><h3>Quick links</h3><ul><li><a href="#stories">Updates</a></li><li><a href="#impact">Agenda</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">Profile</a></li></ul></div>
+                <div><h3>Contact</h3><ul><li>📞 0728 682 749</li><li>📞 0182 095 270</li><li>📍 Ang'urai East, Busia</li><li>🇰🇪 ODM · Kenya</li></ul></div>
+            </div>
+            <div class="footer-bottom"><span>© <span id="year"></span> Swaleh Chemasuet · Ang'urai East</span><span>Built with ❤️ for the people</span></div>
+        </div>
+    </footer>
+    <!-- modal -->
+    <div class="modal" id="articleModal" onclick="closeArticle(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-image"><img id="modalImage" src="" alt=""><button class="modal-close" onclick="closeArticle()">×</button></div>
+            <div class="modal-body"><span class="tag">TNCC Story</span><h2 id="modalTitle"></h2><p id="modalText"></p><div class="modal-share"><span style="font-weight:600;color:#5f5a55;">Share:</span><a href="#" class="share-btn twitter" onclick="shareModal('Twitter')">🐦 Twitter</a><a href="#" class="share-btn facebook" onclick="shareModal('Facebook')">📘 Facebook</a><a href="#" class="share-btn whatsapp" onclick="shareModal('WhatsApp')">💬 WhatsApp</a></div></div>
+        </div>
+    </div>
+    <script>
+        // ===== DATA =====
+        const DEFAULT_STORIES = [
+            { title: 'Harvesting improved Kanga groundnuts', content: 'Today marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers. This is a big step towards food security and income generation.', tag: 'Agriculture', image: 'oday marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers.1' },
+            { title: 'Stakeholders meeting at Aloete Dispensary', content: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location. We discussed healthcare delivery, staffing, and medical supplies.', tag: 'Health', image: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location.jpg' },
+            { title: 'Public baraza at Changara Health Centre', content: 'Public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division. We tackled water, roads, and security issues.', tag: 'Community', image: 'public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division.' },
+            { title: 'Zero-grazing dairy unit visit', content: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara. We discussed milk production and market linkages.', tag: 'Agriculture', image: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara.1' }
+        ];
+        const STORAGE_KEY = 'swaleh_posts';
+        function getPosts() { try { const d = localStorage.getItem(STORAGE_KEY); if (d) { const p = JSON.parse(d); return p.length ? p : DEFAULT_STORIES; } } catch {} return DEFAULT_STORIES; }
+        function savePosts(p) { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }
+        // render
+        function renderWebsiteStories() {
+            const posts = getPosts();
+            const grid = document.getElementById('storiesGrid');
+            grid.innerHTML = posts.map((post, i) => `
+                <article class="card">
+                    <div class="card-image"><img src="${post.image || 'swaleh main picture.jpg'}" alt="${post.title}" onerror="this.src='swaleh main picture.jpg'"></div>
+                    <div class="card-body">
+                        <span class="card-tag">${post.tag || 'Update'}</span>
+                        <h3>${post.title}</h3>
+                        <p>${post.content.substring(0,120)}${post.content.length>120?'...':''}</p>
+                        <a class="card-link" href="#" onclick="openArticle(event, ${i})">Read more →</a>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn twitter" onclick="shareStory('Twitter','${post.title}')">🐦 Tweet</a>
+                            <a href="#" class="share-btn facebook" onclick="shareStory('Facebook','${post.title}')">📘 Share</a>
+                            <a href="#" class="share-btn whatsapp" onclick="shareStory('WhatsApp','${post.title}')">💬 WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // ===== GALLERY - clean curated list with reliable images =====
+        const GALLERY_IMAGES = [
+            { src: 'swaleh main picture.jpg', caption: '⚡ Swaleh Chemasuet' },
+            { src: 'agriculture.jpg', caption: '🌾 Agriculture in Ang\'urai' },
+            { src: 'agriculture 2.jpg', caption: '🌱 Farming initiatives' },
+            { src: 'agriculture 3.jpg', caption: '🚜 Modern farming' },
+            { src: 'brothers and my sons in the shamba.jpg', caption: '👨‍🌾 Family in the shamba' },
+            { src: 'Busia County women representing Hon. Catherine Wamayo, during her working tour of Teso North Sub-County.jpg', caption: '👩‍💼 Women leaders in Busia' },
+            { src: 'I had the honour of attending the 80th Annual General Meeting (AGM) of S.A. Kolanya Boys\' Senior School.jpg', caption: '🎓 Kolanya Boys AGM' },
+            { src: 'I joined family, friends, leaders, and residents of Elalai arena during a fundraising in support of the burial arrangements for the late CPL Moses Kimatwai Simatwa..jpg', caption: '🤝 Fundraising at Elalai' },
+            { src: 'I joined the Catholic faithful of Machakha in a momentous occasion as we welcomed a priest to the newly established Machakha Parish.jpg', caption: '⛪ Machakha Parish' },
+            { src: 'I supervised the installation of spotlights at Changara Market, an important initiative sponsored by H.E. Dr. Arthur Odera, Deputy Governor of Busia County.latest', caption: '💡 Spotlights at Changara' },
+            { src: 'oday I attended a meeting of Changara Community Welfare Association  to discuss  how can  Association diversify its operations in the future', caption: '🤝 Changara Welfare Association' },
+            { src: 'oday marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers.1', caption: '🌾 Kanga groundnut harvest' },
+            { src: 'odm supporter.jpg', caption: '🔴 ODM supporters' },
+            { src: 'odm.jpg', caption: '🟡 ODM party spirit' },
+            { src: 'public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division, Bwana Mohammed Gumo..jpg', caption: '🏛️ Public baraza Changara' },
+            { src: 'Today i was honored to attend the fundraising at Changara, Koitamer Area, Clan Komolo in support of the burial of the Late Benjamin Imaan of Komolo Clan', caption: '🕊️ Fundraising at Koitamer' },
+            { src: 'Today, I had a productive engagement with the Changara ACC stage Bodaboda where we discussed issues affecting the sector and the important role bodaboda operators play in our community\'s development.', caption: '🛵 Bodaboda engagement' }
+        ];
+
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            // pick best 6 images for clean layout, with fallback
+            const selected = GALLERY_IMAGES.slice(0, 6);
+            grid.innerHTML = selected.map((item, idx) => `
+                <div class="gallery-item ${idx === 0 ? 'featured' : ''}">
+                    <img src="${item.src}" alt="${item.caption}" onerror="this.src='swaleh main picture.jpg'">
+                    <div class="gallery-caption">${item.caption}</div>
+                </div>
+            `).join('');
+        }
+
+        let currentArticleIndex = 0;
+        function openArticle(e, i) { e.preventDefault(); const posts = getPosts(); const p = posts[i]; currentArticleIndex = i; document.getElementById('modalTitle').textContent = p.title; document.getElementById('modalImage').src = p.image || 'swaleh main picture.jpg'; document.getElementById('modalText').textContent = p.content; document.getElementById('articleModal').classList.add('show'); document.body.style.overflow = 'hidden'; }
+        function closeArticle(e) { if (e && e.target !== e.currentTarget) return; document.getElementById('articleModal').classList.remove('show'); document.body.style.overflow = ''; }
+        function shareStory(platform, title) { const url = window.location.href; const text = `🚀 ${title} · Swaleh Chemasuet for Ang'urai East MCA 2026 #ODM`; let shareUrl = ''; if (platform==='Twitter') shareUrl=`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`; else if(platform==='Facebook') shareUrl=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`; else if(platform==='WhatsApp') shareUrl=`https://wa.me/?text=${encodeURIComponent(text+' '+url)}`; if(shareUrl) window.open(shareUrl,'_blank','width=600,height=500'); return false; }
+        function shareModal(platform) { const posts = getPosts(); const p = posts[currentArticleIndex]; shareStory(platform, p ? p.title : 'Swaleh Chemasuet'); return false; }
+        function toggleMenu() { document.getElementById('mainMenu').classList.toggle('open'); }
+        function closeMenu() { document.getElementById('mainMenu').classList.remove('open'); }
+        function subscribeNewsletter(e) { e.preventDefault(); const email = e.target.querySelector('input[type="email"]').value; if(email){ alert(`✅ Thank you ${email}! Updates will be sent.`); e.target.reset(); } return false; }
+        document.addEventListener('DOMContentLoaded', function(){ document.getElementById('year').textContent = new Date().getFullYear(); renderWebsiteStories(); renderGallery(); });
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeArticle(e); });
+    </script>
+</body>
+</html>
