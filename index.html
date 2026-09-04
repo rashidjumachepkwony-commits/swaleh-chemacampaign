@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Swaleh Chemasuet | Ang'urai East MCA 2026">
+    <meta name="title" content="Swaleh Chemasuet | Ang'urai East MCA 2027">
     <meta name="description" content="Swaleh Chemasuet, ODM candidate for Ang'urai East MCA. A fresh voice for progress, community service and inclusive leadership.">
-    <title>Swaleh Chemasuet · Ang'urai East MCA</title>
+    <title>Swaleh Chemasuet · Ang'urai East MCA 2027</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <style>
         * {
@@ -13,9 +13,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             background: #f5f2f0;
             color: #1e1e1e;
             line-height: 1.6;
@@ -32,10 +34,9 @@
             --odm-gold: #f5b81b;
             --odm-light: #fcf7f0;
             --white: #ffffff;
-            --shadow: 0 12px 30px rgba(0,0,0,0.08);
+            --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
             --radius: 24px;
         }
-        /* top bar */
         .topbar {
             background: var(--odm-dark);
             color: #e0d6c8;
@@ -53,7 +54,6 @@
             font-weight: 600;
             color: var(--odm-gold);
         }
-        /* header */
         header {
             position: sticky;
             top: 0;
@@ -73,6 +73,7 @@
             display: flex;
             align-items: center;
             gap: 14px;
+            text-decoration: none;
         }
         .brand img {
             width: 56px;
@@ -88,7 +89,6 @@
             font-size: 1.2rem;
             color: var(--odm-dark);
             line-height: 1.1;
-            letter-spacing: -0.3px;
         }
         .brand-text strong span {
             color: var(--odm-red);
@@ -107,6 +107,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            flex-wrap: wrap;
         }
         .menu a {
             padding: 8px 16px;
@@ -115,6 +116,7 @@
             color: #2d2a2a;
             border-radius: 40px;
             transition: 0.2s;
+            text-decoration: none;
         }
         .menu a:hover {
             background: var(--odm-red);
@@ -142,7 +144,6 @@
             font-size: 1.4rem;
             cursor: pointer;
         }
-        /* hero */
         .hero {
             position: relative;
             min-height: 580px;
@@ -154,7 +155,7 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(26,26,44,0.88) 0%, rgba(26,26,44,0.4) 70%),
+            background: linear-gradient(135deg, rgba(26, 26, 44, 0.88) 0%, rgba(26, 26, 44, 0.4) 70%),
                 url('swaleh main picture.jpg') center/cover no-repeat;
             z-index: 0;
         }
@@ -165,7 +166,7 @@
             left: 0;
             right: 0;
             height: 100px;
-            background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent);
         }
         .hero-content {
             position: relative;
@@ -232,13 +233,21 @@
             box-shadow: 0 10px 24px rgba(245, 184, 27, 0.3);
         }
         .btn-outline {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .btn-outline:hover {
             background: white;
             color: var(--odm-dark);
+        }
+        .btn-danger {
+            background: var(--odm-red);
+            color: white;
+        }
+        .btn-danger:hover {
+            background: #b00e20;
+            transform: translateY(-2px);
         }
         .hero-stats {
             display: flex;
@@ -247,8 +256,8 @@
             margin-top: 36px;
         }
         .stat-item {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 8px 20px;
             border-radius: 40px;
         }
@@ -260,14 +269,16 @@
             font-size: 0.7rem;
             color: #ccc2b6;
         }
-        /* section */
-        section { padding: 70px 0; }
+        section {
+            padding: 70px 0;
+        }
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             gap: 30px;
             margin-bottom: 35px;
+            flex-wrap: wrap;
         }
         .section-header .kicker {
             color: var(--odm-red);
@@ -287,7 +298,6 @@
             max-width: 480px;
             font-size: 0.95rem;
         }
-        /* grid stories */
         .stories-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
@@ -299,7 +309,7 @@
             overflow: hidden;
             border: 1px solid #eae3de;
             transition: 0.25s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
         }
         .card:hover {
             transform: translateY(-6px);
@@ -317,8 +327,12 @@
             object-fit: cover;
             transition: 0.4s;
         }
-        .card:hover .card-image img { transform: scale(1.04); }
-        .card-body { padding: 22px 24px 24px; }
+        .card:hover .card-image img {
+            transform: scale(1.04);
+        }
+        .card-body {
+            padding: 22px 24px 24px;
+        }
         .card-tag {
             background: #fce8ea;
             color: var(--odm-red);
@@ -333,7 +347,10 @@
             color: var(--odm-dark);
             margin: 10px 0 6px;
         }
-        .card p { color: #5f5a55; font-size: 0.9rem; }
+        .card p {
+            color: #5f5a55;
+            font-size: 0.9rem;
+        }
         .card-link {
             display: inline-block;
             margin-top: 12px;
@@ -342,8 +359,9 @@
             font-size: 0.85rem;
             cursor: pointer;
         }
-        .card-link:hover { color: var(--odm-gold); }
-        /* share */
+        .card-link:hover {
+            color: var(--odm-gold);
+        }
         .share-buttons {
             display: flex;
             gap: 8px;
@@ -363,11 +381,22 @@
             transition: 0.2s;
             text-decoration: none;
         }
-        .share-btn.twitter { background: #1DA1F2; color: white; }
-        .share-btn.facebook { background: #1877F2; color: white; }
-        .share-btn.whatsapp { background: #25D366; color: white; }
-        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
-        /* feature */
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+        .share-btn.facebook {
+            background: #1877F2;
+            color: white;
+        }
+        .share-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
         .feature {
             display: grid;
             grid-template-columns: 1.1fr 1fr;
@@ -403,7 +432,10 @@
             color: var(--odm-dark);
             margin-bottom: 12px;
         }
-        .feature-content > p { color: #5f5a55; margin-bottom: 20px; }
+        .feature-content>p {
+            color: #5f5a55;
+            margin-bottom: 20px;
+        }
         .feature-list {
             display: grid;
             gap: 12px;
@@ -413,6 +445,7 @@
             display: flex;
             gap: 14px;
             align-items: flex-start;
+            list-style: none;
         }
         .feature-list .check {
             width: 26px;
@@ -427,15 +460,24 @@
             flex-shrink: 0;
             margin-top: 2px;
         }
-        .feature-list li strong { color: var(--odm-dark); display: block; }
-        .feature-list li span { color: #5f5a55; font-size: 0.9rem; }
-        /* impact */
+        .feature-list li strong {
+            color: var(--odm-dark);
+            display: block;
+        }
+        .feature-list li span {
+            color: #5f5a55;
+            font-size: 0.9rem;
+        }
         .impact {
             background: var(--odm-dark);
             color: white;
         }
-        .impact .section-header h2 { color: white; }
-        .impact .section-header p { color: #c9bcb0; }
+        .impact .section-header h2 {
+            color: white;
+        }
+        .impact .section-header p {
+            color: #c9bcb0;
+        }
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -443,9 +485,9 @@
         }
         .impact-card {
             padding: 28px 24px;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
             transition: 0.2s;
         }
         .impact-card:hover {
@@ -453,10 +495,18 @@
             transform: translateY(-4px);
             border-color: var(--odm-gold);
         }
-        .impact-icon { font-size: 2.2rem; margin-bottom: 10px; }
-        .impact-card h3 { color: var(--odm-gold); margin-bottom: 4px; }
-        .impact-card p { color: #c9bcb0; font-size: 0.9rem; }
-        /* gallery */
+        .impact-icon {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .impact-card h3 {
+            color: var(--odm-gold);
+            margin-bottom: 4px;
+        }
+        .impact-card p {
+            color: #c9bcb0;
+            font-size: 0.9rem;
+        }
         .gallery-grid {
             display: grid;
             grid-template-columns: 1.3fr 0.7fr 0.7fr;
@@ -469,20 +519,24 @@
             position: relative;
             background: #d5ccc4;
         }
-        .gallery-item:first-child { grid-row: span 2; }
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: 0.4s;
         }
-        .gallery-item:hover img { transform: scale(1.04); }
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
         .gallery-caption {
             position: absolute;
             bottom: 14px;
             left: 14px;
             right: 14px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
             padding: 6px 16px;
             border-radius: 30px;
@@ -490,7 +544,6 @@
             font-weight: 600;
             backdrop-filter: blur(4px);
         }
-        /* about */
         .about {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
@@ -510,7 +563,10 @@
             width: min(280px, 80%);
             border-radius: 30px;
         }
-        .about-content p { color: #5f5a55; margin: 10px 0; }
+        .about-content p {
+            color: #5f5a55;
+            margin: 10px 0;
+        }
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -523,10 +579,18 @@
             border-radius: 16px;
             padding: 14px 18px;
         }
-        .about-box strong { color: var(--odm-dark); display: block; font-size: 0.85rem; }
-        .about-box span { font-size: 0.82rem; color: #5f5a55; }
-        /* cta */
-        .cta-section { padding-top: 20px; }
+        .about-box strong {
+            color: var(--odm-dark);
+            display: block;
+            font-size: 0.85rem;
+        }
+        .about-box span {
+            font-size: 0.82rem;
+            color: #5f5a55;
+        }
+        .cta-section {
+            padding-top: 20px;
+        }
         .cta-box {
             background: linear-gradient(135deg, var(--odm-dark), #2a2a42);
             border-radius: 30px;
@@ -539,11 +603,28 @@
             flex-wrap: wrap;
             border: 1px solid var(--odm-gold);
         }
-        .cta-box .kicker { color: var(--odm-gold); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; font-weight: 800; }
-        .cta-box h2 { color: white; font-size: clamp(1.4rem, 2.5vw, 2rem); }
-        .cta-box p { color: #c9bcb0; max-width: 600px; }
-        .cta-box .btn-primary { background: var(--odm-gold); color: var(--odm-dark); }
-        .cta-box .btn-primary:hover { background: #f0c94b; }
+        .cta-box .kicker {
+            color: var(--odm-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.7rem;
+            font-weight: 800;
+        }
+        .cta-box h2 {
+            color: white;
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+        }
+        .cta-box p {
+            color: #c9bcb0;
+            max-width: 600px;
+        }
+        .cta-box .btn-primary {
+            background: var(--odm-gold);
+            color: var(--odm-dark);
+        }
+        .cta-box .btn-primary:hover {
+            background: #f0c94b;
+        }
         .newsletter-form {
             display: flex;
             gap: 10px;
@@ -561,15 +642,24 @@
             min-width: 180px;
             outline: none;
         }
-        .newsletter-form .btn { border-radius: 50px; padding: 12px 28px; }
+        .newsletter-form .btn {
+            border-radius: 50px;
+            padding: 12px 28px;
+        }
         .contact-info {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
             margin-top: 10px;
         }
-        .contact-info a { color: var(--odm-gold); font-weight: 600; display: flex; align-items: center; gap: 6px; }
-        /* footer */
+        .contact-info a {
+            color: var(--odm-gold);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
         footer {
             background: var(--odm-dark);
             color: #c9bcb0;
@@ -594,8 +684,16 @@
             border-radius: 50%;
             border: 2px solid var(--odm-gold);
         }
-        .footer-brand strong { color: white; font-size: 0.95rem; }
-        .footer-brand small { display: block; font-size: 0.65rem; font-weight: 400; color: #a09588; }
+        .footer-brand strong {
+            color: white;
+            font-size: 0.95rem;
+        }
+        .footer-brand small {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: #a09588;
+        }
         .footer-social {
             display: flex;
             gap: 12px;
@@ -608,19 +706,42 @@
             width: 38px;
             height: 38px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
             color: white;
             transition: 0.2s;
             font-size: 0.9rem;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-decoration: none;
         }
-        .footer-social a:hover { background: var(--odm-red); color: white; transform: translateY(-3px); }
-        footer h3 { color: white; font-size: 0.95rem; margin-bottom: 12px; }
-        footer p, footer li { font-size: 0.82rem; color: #b3a69b; }
-        footer ul { display: grid; gap: 6px; }
-        footer a:hover { color: white; }
+        .footer-social a:hover {
+            background: var(--odm-red);
+            color: white;
+            transform: translateY(-3px);
+        }
+        footer h3 {
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        footer p,
+        footer li {
+            font-size: 0.82rem;
+            color: #b3a69b;
+            list-style: none;
+        }
+        footer ul {
+            display: grid;
+            gap: 6px;
+        }
+        footer a {
+            color: #b3a69b;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             margin-top: 30px;
             padding-top: 18px;
             display: flex;
@@ -628,19 +749,20 @@
             flex-wrap: wrap;
             font-size: 0.72rem;
         }
-        /* modal */
         .modal {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(6px);
             z-index: 2000;
             padding: 20px;
             align-items: center;
             justify-content: center;
         }
-        .modal.show { display: flex; }
+        .modal.show {
+            display: flex;
+        }
         .modal-box {
             background: white;
             max-width: 800px;
@@ -648,7 +770,7 @@
             max-height: 90vh;
             overflow: auto;
             border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
         }
         .modal-image {
             position: relative;
@@ -673,9 +795,11 @@
             color: var(--odm-dark);
             font-size: 1.3rem;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        .modal-body { padding: 28px 32px 32px; }
+        .modal-body {
+            padding: 28px 32px 32px;
+        }
         .modal-body .tag {
             background: #fce8ea;
             color: var(--odm-red);
@@ -685,30 +809,421 @@
             font-weight: 800;
             text-transform: uppercase;
         }
-        .modal-body h2 { margin: 10px 0 12px; color: var(--odm-dark); }
-        .modal-body p { color: #5f5a55; }
-        .modal-share { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-        /* responsive */
+        .modal-body h2 {
+            margin: 10px 0 12px;
+            color: var(--odm-dark);
+        }
+        .modal-body p {
+            color: #5f5a55;
+        }
+        .modal-share {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .manifesto-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid #eae3de;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+        .manifesto-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--odm-gold);
+            box-shadow: var(--shadow);
+        }
+        .manifesto-card h4 {
+            color: var(--odm-dark);
+            margin-bottom: 8px;
+        }
+        .manifesto-card p {
+            color: #5f5a55;
+            font-size: 0.9rem;
+        }
+        .donation-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            border: 2px solid var(--odm-gold);
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+        .donation-card h3 {
+            color: var(--odm-dark);
+            margin-bottom: 8px;
+        }
+        .donation-card p {
+            color: #5f5a55;
+            margin-bottom: 16px;
+        }
+        .donation-btn {
+            background: var(--odm-gold);
+            color: var(--odm-dark);
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .donation-btn:hover {
+            background: #f0c94b;
+            transform: translateY(-2px);
+        }
+        .volunteer-form {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 1px solid #eae3de;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .volunteer-form input,
+        .volunteer-form textarea,
+        .volunteer-form select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+            font-family: inherit;
+        }
+        .volunteer-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .volunteer-form .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .admin-panel {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 1px solid #eae3de;
+            margin-top: 20px;
+        }
+        .admin-panel h3 {
+            margin-bottom: 16px;
+            color: var(--odm-dark);
+        }
+        .admin-panel input,
+        .admin-panel textarea,
+        .admin-panel select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+        .admin-panel textarea {
+            min-height: 80px;
+        }
+        .admin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .admin-list {
+            max-height: 300px;
+            overflow-y: auto;
+            background: #f9f7f5;
+            border-radius: 16px;
+            padding: 12px;
+        }
+        .admin-list li {
+            padding: 8px 12px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+        .admin-list li:last-child {
+            border: none;
+        }
+        .stk-push {
+            background: #1a1a2c;
+            color: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+            border: 1px solid var(--odm-gold);
+        }
+        .stk-push input {
+            padding: 12px 16px;
+            border-radius: 40px;
+            border: none;
+            width: 80%;
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+        .stk-push .btn {
+            background: var(--odm-gold);
+            color: var(--odm-dark);
+            width: 80%;
+            justify-content: center;
+        }
+        .stk-push .btn:hover {
+            background: #f0c94b;
+        }
+        .login-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-overlay.show {
+            display: flex;
+        }
+        .login-box {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        .login-box h2 {
+            color: var(--odm-dark);
+            margin-bottom: 8px;
+        }
+        .login-box p {
+            color: #888;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+        .login-box .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        .login-error {
+            color: var(--odm-red);
+            font-size: 0.85rem;
+            margin-top: 10px;
+            display: none;
+        }
+        .admin-badge {
+            background: var(--odm-gold);
+            color: var(--odm-dark);
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-left: 4px;
+        }
+        .polling-stations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .polling-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #eae3de;
+            transition: 0.2s;
+        }
+        .polling-card:hover {
+            border-color: var(--odm-gold);
+            box-shadow: var(--shadow);
+        }
+        .polling-card h4 {
+            color: var(--odm-dark);
+            margin-bottom: 4px;
+        }
+        .polling-card .code {
+            font-size: 0.7rem;
+            color: var(--odm-red);
+            font-weight: 700;
+        }
+        .polling-card p {
+            font-size: 0.85rem;
+            color: #5f5a55;
+        }
+        .voter-pledge {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 2px solid var(--odm-red);
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        .voter-pledge input,
+        .voter-pledge select,
+        .voter-pledge textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+            font-family: inherit;
+        }
+        .issue-tracker {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .issue-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            border-left: 4px solid var(--odm-gold);
+        }
+        .issue-card.critical {
+            border-left-color: var(--odm-red);
+        }
+        .campaign-trail {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .event-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid #eae3de;
+            transition: 0.2s;
+        }
+        .event-card:hover {
+            border-color: var(--odm-gold);
+            box-shadow: var(--shadow);
+        }
+        .event-card .date {
+            color: var(--odm-red);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .event-card h4 {
+            color: var(--odm-dark);
+            margin: 6px 0;
+        }
+        .event-card p {
+            color: #5f5a55;
+            font-size: 0.9rem;
+        }
+        .event-card .coordinator {
+            font-size: 0.8rem;
+            color: #888;
+        }
+        .contributor-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .contributor-item {
+            padding: 10px 14px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+        .contributor-item:last-child {
+            border: none;
+        }
+        /* Polling station count badge */
+        .polling-count {
+            display: inline-block;
+            background: var(--odm-red);
+            color: white;
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
         @media (max-width: 992px) {
-            .stories-grid { grid-template-columns: 1fr 1fr; }
-            .stories-grid .card:first-child { grid-column: span 2; }
-            .feature { grid-template-columns: 1fr; }
-            .impact-grid { grid-template-columns: 1fr 1fr; }
-            .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
-            .gallery-item:first-child { grid-row: auto; grid-column: span 2; }
-            .about { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-            .cta-box { flex-direction: column; text-align: center; padding: 35px 25px; }
-            .contact-info { justify-content: center; }
-            .newsletter-form { max-width: 100%; }
+            .stories-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stories-grid .card:first-child {
+                grid-column: span 2;
+            }
+            .feature {
+                grid-template-columns: 1fr;
+            }
+            .impact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 180px;
+            }
+            .gallery-item:first-child {
+                grid-row: auto;
+                grid-column: span 2;
+            }
+            .about {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cta-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 35px 25px;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+            .newsletter-form {
+                max-width: 100%;
+            }
+            .admin-grid {
+                grid-template-columns: 1fr;
+            }
+            .issue-tracker {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 768px) {
-            .menu-btn { display: block; }
+            .menu-btn {
+                display: block;
+            }
             .menu {
                 display: none;
                 position: absolute;
                 top: 100%;
-                left: 0; right: 0;
+                left: 0;
+                right: 0;
                 background: white;
                 padding: 16px 20px;
                 flex-direction: column;
@@ -717,33 +1232,102 @@
                 box-shadow: var(--shadow);
                 border-top: 2px solid var(--odm-red);
             }
-            .menu.open { display: flex; }
-            .menu a { padding: 10px 14px; }
-            .menu .cta { text-align: center; }
-            .hero { min-height: 460px; }
-            .hero-content { padding: 40px 0; }
-            .hero h1 { font-size: 2.4rem; }
-            section { padding: 50px 0; }
-            .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .stories-grid { grid-template-columns: 1fr; }
-            .stories-grid .card:first-child { grid-column: auto; }
-            .impact-grid { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-            .gallery-item:first-child { grid-column: auto; }
-            .about-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-            .cta-box { padding: 28px 18px; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-            .modal-image img { height: 180px; }
-            .modal-body { padding: 20px; }
-            .newsletter-form { flex-direction: column; }
-            .newsletter-form input { width: 100%; }
+            .menu.open {
+                display: flex;
+            }
+            .menu a {
+                padding: 10px 14px;
+            }
+            .menu .cta {
+                text-align: center;
+            }
+            .hero {
+                min-height: 460px;
+            }
+            .hero-content {
+                padding: 40px 0;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            section {
+                padding: 50px 0;
+            }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+            .stories-grid .card:first-child {
+                grid-column: auto;
+            }
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 200px;
+            }
+            .gallery-item:first-child {
+                grid-column: auto;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .cta-box {
+                padding: 28px 18px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .modal-image img {
+                height: 180px;
+            }
+            .modal-body {
+                padding: 20px;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .newsletter-form input {
+                width: 100%;
+            }
+            .stk-push input,
+            .stk-push .btn {
+                width: 100%;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .polling-stations {
+                grid-template-columns: 1fr;
+            }
+            .campaign-trail {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2rem; }
-            .brand img { width: 44px; height: 44px; }
-            .brand-text strong { font-size: 1rem; }
-            .feature-image img { height: 260px; }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .brand img {
+                width: 44px;
+                height: 44px;
+            }
+            .brand-text strong {
+                font-size: 1rem;
+            }
+            .feature-image img {
+                height: 260px;
+            }
         }
     </style>
 </head>
@@ -752,7 +1336,7 @@
     <div class="topbar">
         <div class="container">
             <span>⚡ SWALEH CHEMASUET · ANG'URAI EAST</span>
-            <span>#FreshLeadership · ODM 2026</span>
+            <span>#EdekeEremit · ODM 2027</span>
         </div>
     </div>
     <!-- header -->
@@ -762,130 +1346,514 @@
                 <img src="swaleh main picture.jpg" alt="Swaleh Chemasuet" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23ce1126%22/><text x=%2220%22 y=%2270%22 font-size=%2250%22 fill=%22white%22>SC</text></svg>'">
                 <div class="brand-text">
                     <strong>Swaleh <span>Chemasuet</span></strong>
-                    <small>Ang'urai East MCA · 2026</small>
+                    <small>Ang'urai East MCA · 2027</small>
                 </div>
             </a>
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
             <ul class="menu" id="mainMenu">
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#stories" onclick="closeMenu()">Updates</a></li>
-                <li><a href="#impact" onclick="closeMenu()">Agenda</a></li>
-                <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
-                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#manifesto" onclick="closeMenu()">6 Pillars</a></li>
+                <li><a href="#polling" onclick="closeMenu()">Polling</a></li>
+                <li><a href="#donate" onclick="closeMenu()">Donate</a></li>
+                <li><a href="#volunteer" onclick="closeMenu()">Volunteer</a></li>
+                <li><a href="#issues" onclick="closeMenu()">Issues</a></li>
+                <li><a href="#events" onclick="closeMenu()">Events</a></li>
+                <li><a href="#admin-section" onclick="closeMenu(); showAdminLogin();">Admin <span class="admin-badge">🔒</span></a></li>
                 <li><a href="#contact" class="cta" onclick="closeMenu()">Connect</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- ADMIN LOGIN OVERLAY -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <h2>🔐 Admin Access</h2>
+            <p>Enter your credentials to manage the campaign.</p>
+            <form onsubmit="handleAdminLogin(event)">
+                <input type="text" id="adminUser" placeholder="Username" required value="admin">
+                <input type="password" id="adminPass" placeholder="Password" required value="swaleh2027">
+                <button type="submit" class="btn btn-primary">Login →</button>
+                <div class="login-error" id="loginError">❌ Invalid credentials. Try again.</div>
+            </form>
+            <p style="margin-top: 12px; font-size: 0.7rem; color: #aaa;">Default: admin / swaleh2027</p>
+            <button onclick="closeLogin()" style="margin-top: 10px; background: none; border: none; color: #888; cursor: pointer; font-size: 0.8rem;">✕ Close</button>
+        </div>
+    </div>
+
     <!-- hero -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">● ODM · Ang'urai East · 2026</div>
+                <div class="hero-badge">● ODM · Ang'urai East · 2027</div>
                 <h1>Swaleh <span>Chemasuet</span></h1>
-                <p>A fresh voice, a servant's heart. Running for MCA to bring development, accountability and unity to Ang'urai East.</p>
+                <p><strong>"Edeke Eremit — Maendeleo kwa Wote"</strong><br>A fresh voice, a servant's heart. Running for MCA to bring development, accountability and unity to Ang'urai East.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#stories">View updates →</a>
-                    <a class="btn btn-outline" href="#about">Know Swaleh</a>
+                    <a class="btn btn-primary" href="#manifesto">6 Pillars →</a>
+                    <a class="btn btn-outline" href="#volunteer">Join the team</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat-item"><strong>Community</strong><span>First approach</span></div>
+                    <div class="stat-item"><strong>13</strong><span>Polling Centers</span></div>
+                    <div class="stat-item"><strong>10,350+</strong><span>Registered Voters</span></div>
                     <div class="stat-item"><strong>ODM</strong><span>Party of the people</span></div>
-                    <div class="stat-item"><strong>Vision</strong><span>Inclusive growth</span></div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- stories -->
-    <section id="stories">
+
+    <!-- MANIFESTO: 6 PILLARS -->
+    <section id="manifesto" style="background: #faf7f4;">
         <div class="container">
             <div class="section-header">
                 <div>
-                    <div class="kicker">From the field</div>
-                    <h2>Swaleh's latest updates</h2>
+                    <div class="kicker">The 6 Pillars of Transformation</div>
+                    <h2>Swaleh's Manifesto 2027</h2>
                 </div>
-                <p>Community engagement, development projects, and the voice of Ang'urai East.</p>
+                <p>A comprehensive, measurable blueprint for Ang'urai East Ward, Teso North.</p>
             </div>
-            <div class="stories-grid" id="storiesGrid"></div>
+            <div class="manifesto-grid">
+                <div class="manifesto-card" style="border-left: 4px solid var(--odm-red);">
+                    <h4>🌾 Agricultural Transformation & Value Addition</h4>
+                    <p><strong>Immediate Priority</strong> — Subsidized high-yield maize, soya, and cassava cuttings. Cassava & Grain Milling Mini-Plant. Rehabilitation of 4 cattle dips (Moding, Kakurikit, Aboloi, Chelelemuk). Free bi-annual poultry & dairy vaccination drives. Ward Agriculture Equipment Hire Service with tractors at 60% below commercial rates.</p>
+                </div>
+                <div class="manifesto-card" style="border-left: 4px solid var(--odm-red);">
+                    <h4>🛣️ All-Weather Roads & Solar Clean Water</h4>
+                    <p><strong>Immediate Priority</strong> — Gravel and maintain key feeder roads, install solar streetlights in markets, improve drainage, and ensure clean borehole water for every village.</p>
+                </div>
+                <div class="manifesto-card" style="border-left: 4px solid #f5b81b;">
+                    <h4>📚 100% Transparent Bursaries & ECDE Excellence</h4>
+                    <p><strong>High Priority</strong> — Increase bursary allocation with full transparency, build a digital hub, partner with TVETs for youth skills training, and improve ECDE facilities.</p>
+                </div>
+                <div class="manifesto-card" style="border-left: 4px solid #f5b81b;">
+                    <h4>🏥 Equipped Dispensaries & Maternal Health</h4>
+                    <p><strong>High Priority</strong> — Equip Aloete and Changara health centers with maternity wings, ambulances, and essential medicines. Promote maternal and child health.</p>
+                </div>
+                <div class="manifesto-card" style="border-left: 4px solid #2e7d32;">
+                    <h4>👩‍💼 Youth, Bodaboda & Women Enterprise Fund</h4>
+                    <p><strong>Strategic Priority</strong> — Empower women and youth groups, support bodaboda riders with financing, and strengthen community peace committees. 30% of Ward Economic Stimulus focused here.</p>
+                </div>
+                <div class="manifesto-card" style="border-left: 4px solid #2e7d32;">
+                    <h4>🤝 Accountable Representation & Citizen Barazas</h4>
+                    <p><strong>Strategic Priority</strong> — Foster coexistence, dialogue, and community cohesion through regular barazas. Every shilling accounted for down to the last cent.</p>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- feature -->
-    <section>
-        <div class="container feature">
-            <div class="feature-image">
-                <img src="I supervised the installation of spotlights at Changara Market, an important initiative sponsored by H.E. Dr. Arthur Odera, Deputy Governor of Busia County.latest" alt="Swaleh with community" onerror="this.src='swaleh main picture.jpg'">
-                <div class="feature-label">🤝 People first leadership</div>
-            </div>
-            <div class="feature-content">
-                <div class="kicker" style="color:var(--odm-red);text-transform:uppercase;letter-spacing:0.12em;font-size:0.7rem;font-weight:800;">Why Swaleh?</div>
-                <h2>Service, integrity, and the ODM spirit</h2>
-                <p>Swaleh Chemasuet brings energy, transparency, and a deep connection to the people of Ang'urai East. He believes in grassroots engagement, listening to every voice, and delivering tangible results.</p>
-                <ul class="feature-list">
-                    <li><span class="check">✓</span><span><strong>Youth & employment</strong> Skills training, internships and enterprise support.</span></li>
-                    <li><span class="check">✓</span><span><strong>Health & water</strong> Accessible healthcare and clean water for all.</span></li>
-                    <li><span class="check">✓</span><span><strong>Infrastructure</strong> Roads, markets, and community facilities.</span></li>
-                    <li><span class="check">✓</span><span><strong>Women & inclusion</strong> Empowering women and marginalized groups.</span></li>
-                </ul>
-                <a class="btn btn-primary" href="#about">Read full profile</a>
-            </div>
-        </div>
-    </section>
-    <!-- impact -->
-    <section class="impact" id="impact">
+
+    <!-- POLLING STATIONS - Updated with correct list -->
+    <section id="polling" style="background: white;">
         <div class="container">
             <div class="section-header">
                 <div>
-                    <div class="kicker" style="color:var(--odm-gold);">Agenda 2026</div>
-                    <h2>Our shared vision</h2>
+                    <div class="kicker">IEBC Voter Information</div>
+                    <h2>Ang'urai East Polling Stations</h2>
                 </div>
-                <p>Built on the ODM values of social justice, democracy and inclusive development.</p>
+                <p><span class="polling-count">13 Polling Centers</span> · 10,350+ Estimated Registered Voters</p>
             </div>
-            <div class="impact-grid">
-                <div class="impact-card"><div class="impact-icon">🏗️</div><h3>Infrastructure</h3><p>Upgrade roads, markets, and public spaces for economic growth.</p></div>
-                <div class="impact-card"><div class="impact-icon">👩‍🌾</div><h3>Agriculture</h3><p>Support farmers with inputs, training, and market access.</p></div>
-                <div class="impact-card"><div class="impact-icon">📚</div><h3>Education</h3><p>Improve schools, bursaries, and digital literacy.</p></div>
-                <div class="impact-card"><div class="impact-icon">🩺</div><h3>Healthcare</h3><p>Equip health centers, promote maternal and child health.</p></div>
-                <div class="impact-card"><div class="impact-icon">⚡</div><h3>Youth empowerment</h3><p>Jobs, sports, talent development and mentorship.</p></div>
-                <div class="impact-card"><div class="impact-icon">🤲</div><h3>Unity & peace</h3><p>Foster coexistence, dialogue, and community cohesion.</p></div>
+            <div style="background: #faf7f4; padding: 20px; border-radius: 16px; margin-bottom: 20px;">
+                <h3 style="color: var(--odm-dark);">Verify Your Voter Status</h3>
+                <p style="font-size: 0.9rem; color: #5f5a55;">SMS <strong>ID#YOB</strong> to <strong>707</strong> (e.g., 28491100#1992) · Visit <strong>verify.iebc.or.ke</strong> · IEBC Teso North Office at Amagoro Sub-County Headquarters</p>
+            </div>
+            <div class="polling-stations">
+                <div class="polling-card"><h4>1. KOLANYA S.A NURSERY SCHOOL</h4><p>📍 Kolanya Area</p></div>
+                <div class="polling-card"><h4>2. CHEMASIRI PRIMARY SCHOOL</h4><p>📍 Chemasiri Area</p></div>
+                <div class="polling-card"><h4>3. KOPIA PRIMARY SCHOOL</h4><p>📍 Kopia Area</p></div>
+                <div class="polling-card"><h4>4. KAKEMER PRIMARY SCHOOL</h4><p>📍 Kakemer Area</p></div>
+                <div class="polling-card"><h4>5. AKOBWAIT PRIMARY SCHOOL (ANG'URAI)</h4><p>📍 Ang'urai Area</p></div>
+                <div class="polling-card"><h4>6. CHANGARA PRIMARY SCHOOL</h4><p>📍 Changara Area</p></div>
+                <div class="polling-card"><h4>7. ALOETE PRIMARY SCHOOL</h4><p>📍 Aloete Area</p></div>
+                <div class="polling-card"><h4>8. KAWALUN PRIMARY SCHOOL</h4><p>📍 Kawalun Area</p></div>
+                <div class="polling-card"><h4>9. ATABA OBURI PRIMARY SCHOOL</h4><p>📍 Ataba Oburi Area</p></div>
+                <div class="polling-card"><h4>10. ANGARO PRIMARY SCHOOL</h4><p>📍 Angaro Area</p></div>
+                <div class="polling-card"><h4>11. KISIOMBE PRIMARY SCHOOL</h4><p>📍 Kisiombe Area</p></div>
+                <div class="polling-card"><h4>12. MATUMBAI PRIMARY SCHOOL</h4><p>📍 Matumbai Area</p></div>
+                <div class="polling-card"><h4>13. AKADOT PRIMARY SCHOOL</h4><p>📍 Akadot Area</p></div>
+            </div>
+            <div style="text-align: center; margin-top: 20px; background: #faf7f4; padding: 16px; border-radius: 12px;">
+                <p style="font-size: 0.9rem; color: #5f5a55;"><strong>Election Day Reminders:</strong> Polling stations open 6:00 AM - 5:00 PM. Carry your Original National ID Card. Mark your X clearly next to <strong>HON. SWALEH CHEMASUET</strong> on the MCA ballot paper. Stay peaceful.</p>
             </div>
         </div>
     </section>
-    <!-- gallery -->
-    <section id="gallery">
+
+    <!-- VOTER PLEDGE -->
+    <section style="background: #faf7f4;">
         <div class="container">
             <div class="section-header">
                 <div>
-                    <div class="kicker">Captured moments</div>
-                    <h2>Swaleh in action</h2>
+                    <div class="kicker">Pledge Your Vote</div>
+                    <h2>Ang'urai East Voter Commitment</h2>
                 </div>
-                <p>Meeting the people, listening to concerns, and working for Ang'urai East.</p>
+                <p>Join thousands committed to transformative leadership in 2027.</p>
             </div>
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- dynamically filled -->
+            <form class="voter-pledge" id="voterPledgeForm" onsubmit="submitVoterPledge(event)">
+                <div class="form-row">
+                    <input type="text" id="pledgeName" placeholder="Your Full Name *" required>
+                    <input type="tel" id="pledgePhone" placeholder="Phone Number *" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="pledgeVillage" placeholder="Your Village / Neighborhood *" required>
+                    <select id="pledgeStation" required>
+                        <option value="">Select Your Polling Station *</option>
+                        <option>Kolanya S.A Nursery School</option>
+                        <option>Chemasiri Primary School</option>
+                        <option>Kopia Primary School</option>
+                        <option>Kakemer Primary School</option>
+                        <option>Akobwait Primary School (Ang'urai)</option>
+                        <option>Changara Primary School</option>
+                        <option>Aloete Primary School</option>
+                        <option>Kawalun Primary School</option>
+                        <option>Ataba Oburi Primary School</option>
+                        <option>Angaro Primary School</option>
+                        <option>Kisiombe Primary School</option>
+                        <option>Matumbai Primary School</option>
+                        <option>Akadot Primary School</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #5f5a55;">
+                        <input type="checkbox" checked> I confirm that I am a registered voter with an active Kenyan National ID Card
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #5f5a55;">
+                        <input type="checkbox"> I require voting day transport assistance
+                    </label>
+                </div>
+                <textarea id="pledgeReason" placeholder="Why you are voting for Swaleh Chemasuet (Optional)"></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit My Voter Pledge Card →</button>
+            </form>
+            <div style="text-align: center; margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 600px; margin: 20px auto;">
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid #eae3de;">
+                    <strong style="font-size: 1.4rem; color: var(--odm-red);">4,822</strong>
+                    <p style="font-size: 0.8rem; color: #5f5a55;">Residents Pledged</p>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid #eae3de;">
+                    <strong style="font-size: 1.4rem; color: var(--odm-red);">1,940</strong>
+                    <p style="font-size: 0.8rem; color: #5f5a55;">Ang'urai Sub-location</p>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 12px; border: 1px solid #eae3de;">
+                    <strong style="font-size: 1.4rem; color: var(--odm-red);">1,580</strong>
+                    <p style="font-size: 0.8rem; color: #5f5a55;">Moding Sub-location</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- DONATION SECTION -->
+    <section id="donate" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">Support the Movement</div>
+                    <h2>Donate to the Campaign</h2>
+                </div>
+                <p>100% people-funded. Every shilling is logged transparently.</p>
+            </div>
+
+            <!-- Campaign Fund Status -->
+            <div style="background: var(--odm-dark); color: white; border-radius: var(--radius); padding: 24px; margin-bottom: 24px; text-align: center; border: 1px solid var(--odm-gold);">
+                <h3 style="color: var(--odm-gold);">Ang'urai East Ward Campaign Fund</h3>
+                <div style="margin: 12px 0;">
+                    <div style="background: rgba(255,255,255,0.1); border-radius: 30px; height: 20px; max-width: 400px; margin: 0 auto; overflow: hidden;">
+                        <div style="width: 3%; background: var(--odm-gold); height: 100%; border-radius: 30px;"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #c9bcb0; margin-top: 6px;">KES 73,500 / Target KES 2,500,000 (3% funded)</p>
+                </div>
+            </div>
+
+            <div class="donation-card">
+                <h3>🤝 Power the Campaign for Ang'urai East</h3>
+                <p><strong>Official Paybill:</strong> 522522 | <strong>Account:</strong> CHE-ANGURAI<br><strong>M-Pesa Till:</strong> 8924150 | Name: CHEMASUET CAMPAIGN</p>
+                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 16px 0;">
+                    <button class="donation-btn" onclick="donateAmount(250)">KSh 250</button>
+                    <button class="donation-btn" onclick="donateAmount(500)">KSh 500</button>
+                    <button class="donation-btn" onclick="donateAmount(1000)">KSh 1,000</button>
+                    <button class="donation-btn" onclick="donateAmount(2500)">KSh 2,500</button>
+                    <button class="donation-btn" onclick="donateAmount(5000)">KSh 5,000</button>
+                    <button class="donation-btn" onclick="donateAmount(10000)">KSh 10,000</button>
+                </div>
+                <p style="font-size:0.8rem; color:#888;">Funds directly empower grassroots mobilization & community oversight teams.<br>KCB Bank: 128 449 8210 (Swaleh Chemasuet Campaign Account)</p>
+            </div>
+
+            <div class="stk-push">
+                <h3 style="color:var(--odm-gold);">📲 STK Push Portal</h3>
+                <p style="color:#c9bcb0;font-size:0.9rem;">Enter your details to trigger an instant Safaricom payment prompt.</p>
+                <form onsubmit="processSTK(event)">
+                    <input type="text" id="donorName" placeholder="Your Full Name *" required style="width:80%;">
+                    <input type="tel" id="phoneInput" placeholder="M-Pesa Mobile No. *" required pattern="[0-9]{10,12}" style="width:80%;">
+                    <input type="number" id="amountInput" placeholder="Amount (KSh)" required min="10" value="500" style="width:80%;">
+                    <select id="donationPurpose" style="width:80%; padding: 12px 16px; border-radius: 40px; border: none; margin: 8px 0;">
+                        <option value="Voter Mobilization">Voter Mobilization & Transport</option>
+                        <option value="Materials">Campaign Materials</option>
+                        <option value="Rallies">Rallies & Barazas</option>
+                        <option value="General">General Campaign Fund</option>
+                    </select>
+                    <textarea id="donorMessage" placeholder="Message of encouragement (Optional)" style="width:80%; padding: 12px 16px; border-radius: 20px; border: none; margin: 8px 0; min-height: 60px; font-family: inherit;"></textarea>
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #c9bcb0; justify-content: center; width: 80%;">
+                        <input type="checkbox" id="anonymousDonation"> Keep my name anonymous on the donor board
+                    </label>
+                    <button type="submit" class="btn" style="width:80%;justify-content:center;margin-top:10px;">💳 Initiate M-Pesa Prompt • KES <span id="displayAmount">500</span></button>
+                </form>
+                <p style="font-size:0.7rem;color:#888;margin-top:10px;">This is a simulation. No real money will be charged.</p>
+                <div id="stkStatus" style="margin-top:12px;font-weight:600;color:var(--odm-gold);"></div>
+            </div>
+
+            <!-- Recent Contributors -->
+            <div style="margin-top: 30px;">
+                <h3 style="color: var(--odm-dark); text-align: center; margin-bottom: 16px;">Recent Grassroots Contributors</h3>
+                <div id="contributorList" class="contributor-list" style="background: #faf7f4; border-radius: 16px; padding: 16px; max-height: 300px; overflow-y: auto;">
+                    <div class="contributor-item"><span>Dr. Charles Otwani</span><span>KES 15,000 · 2026-09-02</span></div>
+                    <div class="contributor-item"><span>Mama Esther Akisa</span><span>KES 2,500 · 2026-09-02</span></div>
+                    <div class="contributor-item"><span>Friends of Ang'urai Diaspora</span><span>KES 50,000 · 2026-09-03</span></div>
+                    <div class="contributor-item"><span>Collins Papa</span><span>KES 1,000 · 2026-09-03</span></div>
+                    <div class="contributor-item"><span>Anonymous Patriot</span><span>KES 5,000 · 2026-09-03</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOLUNTEER PORTAL -->
+    <section id="volunteer" style="background: #faf7f4;">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">Join the Grassroots Army</div>
+                    <h2>Volunteer with Team Swaleh</h2>
+                </div>
+                <p>Elections are won at the polling stations and village barazas. Stand with Swaleh Chemasuet.</p>
+            </div>
+            <div style="background: var(--odm-dark); color: white; border-radius: var(--radius); padding: 24px; margin-bottom: 24px; text-align: center; border: 1px solid var(--odm-gold);">
+                <p style="font-style: italic; font-size: 1.05rem; color: #c9bcb0;">"We are not here to sell empty promises; we are here to organize every village in Ang'urai East so our mothers have water, our youth have jobs, and our county funds are protected."</p>
+                <p style="margin-top: 8px; color: var(--odm-gold);">— Hon. Swaleh Chemasuet</p>
+            </div>
+            <form class="volunteer-form" id="volunteerForm" onsubmit="submitVolunteer(event)">
+                <div class="form-row">
+                    <input type="text" id="volName" placeholder="Full official name *" required>
+                    <input type="email" id="volEmail" placeholder="Email address">
+                </div>
+                <div class="form-row">
+                    <input type="tel" id="volPhone" placeholder="Mobile phone number *" required>
+                    <input type="tel" id="volWhatsApp" placeholder="WhatsApp number (for campaign alerts)">
+                </div>
+                <div class="form-row">
+                    <select id="volLocation" required>
+                        <option value="">Ward Sub-location *</option>
+                        <option>Ang'urai Sub-location</option>
+                        <option>Moding Sub-location</option>
+                        <option>Aboloi Sub-location</option>
+                    </select>
+                    <input type="text" id="volVillage" placeholder="Your specific village/landmark *" required>
+                </div>
+                <select id="volRole" required>
+                    <option value="">Preferred Volunteer Role *</option>
+                    <option>Door-to-Door Ward Canvasser & Mobilizer</option>
+                    <option>Polling Station Agent</option>
+                    <option>Youth Mobilizer</option>
+                    <option>Women League Leader</option>
+                    <option>Digital Campaigner</option>
+                    <option>Event Organizer</option>
+                    <option>Driving/Logistics</option>
+                </select>
+                <div class="form-row">
+                    <select id="volAvailability">
+                        <option value="">Time Availability</option>
+                        <option>Full Time (Daily grassroots campaigns)</option>
+                        <option>Part Time (Weekends)</option>
+                        <option>Event-Based</option>
+                    </select>
+                    <select id="volSize">
+                        <option value="">Campaign Merch Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #5f5a55;">
+                        <input type="checkbox"> I have an Android/Smartphone for results relay
+                    </label>
+                </div>
+                <textarea id="volMessage" placeholder="Past experience or special skills (e.g., served as polling agent, pastor, bodaboda chairman...)"></textarea>
+                <button type="submit" class="btn btn-primary">Register & Generate Official Volunteer Pass →</button>
+            </form>
+            <div style="margin-top: 20px; text-align: center;">
+                <p style="font-size: 0.9rem; color: #5f5a55;"><strong>Volunteer Entitlements:</strong> Official Accredited Badge · Free Campaign Merch · IEBC Agent Training · Direct Access to Candidate · Transport & Lunch Allowances</p>
+                <p style="font-size: 0.85rem; color: var(--odm-red); margin-top: 8px;">13/13 Polling Stations Deployed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ISSUES TRACKER -->
+    <section id="issues" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">Participatory Ward Governance</div>
+                    <h2>Village Priorities & Issues</h2>
+                </div>
+                <p>Direct line to Hon. Swaleh Chemasuet. Your priority will be submitted to our Ward Development Action Matrix.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h3 style="color: var(--odm-dark); margin-bottom: 16px;">📋 Submit a Village Priority</h3>
+                    <form id="issueForm" onsubmit="submitIssue(event)" style="background: #faf7f4; padding: 24px; border-radius: 16px;">
+                        <input type="text" id="issueName" placeholder="Your Name *" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px;">
+                        <input type="tel" id="issuePhone" placeholder="Phone Number *" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px;">
+                        <select id="issueLocation" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px;">
+                            <option value="">Sub-Location *</option>
+                            <option>Ang'urai Sub-location</option>
+                            <option>Moding Sub-location</option>
+                            <option>Aboloi Sub-location</option>
+                        </select>
+                        <input type="text" id="issueVillage" placeholder="Village / Specific Point *" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px;">
+                        <select id="issueCategory" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px;">
+                            <option value="">Issue Category *</option>
+                            <option>Clean Water & Boreholes</option>
+                            <option>Roads & Bridges</option>
+                            <option>Healthcare</option>
+                            <option>Education</option>
+                            <option>Agriculture</option>
+                            <option>Security</option>
+                            <option>Electricity</option>
+                            <option>Other</option>
+                        </select>
+                        <select id="issueUrgency" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px;">
+                            <option value="">Urgency Level *</option>
+                            <option>Critical (Immediate action needed)</option>
+                            <option>Medium (Urgent priority)</option>
+                            <option>Low (Monitor and plan)</option>
+                        </select>
+                        <textarea id="issueDesc" placeholder="Describe the situation & what needs to be done *" required style="width:100%; padding:12px 16px; border:1px solid #ddd; border-radius:12px; margin-bottom:12px; min-height:80px;"></textarea>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit Priority →</button>
+                    </form>
+                </div>
+                <div>
+                    <h3 style="color: var(--odm-dark); margin-bottom: 16px;">📌 Public Issues Under Review</h3>
+                    <div id="issueList" class="admin-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS / CAMPAIGN TRAIL -->
+    <section id="events" style="background: #faf7f4;">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">Campaign Trail</div>
+                    <h2>Upcoming Rallies & Barazas</h2>
+                </div>
+                <p>Meet Hon. Swaleh Chemasuet face-to-face across our villages.</p>
+            </div>
+            <div class="campaign-trail">
+                <div class="event-card">
+                    <div class="date">📅 Saturday, 12th September 2026 · 1:00 PM - 5:30 PM</div>
+                    <h4>🌟 Ang'urai East Grand Manifesto Launch & Mega Rally</h4>
+                    <p>Ang'urai Primary School Grounds (Ang'urai Central) · ~3,500 Expected</p>
+                    <p style="font-size:0.85rem; color:#5f5a55;">Official public unveiling of the 6 Pillars of Transformation. Speeches, cultural performances, and manifesto distribution.</p>
+                    <p class="coordinator">Coordinator: Peter</p>
+                    <button class="btn btn-primary" style="margin-top: 10px; padding: 8px 20px; font-size: 0.8rem;">Attend Event →</button>
+                </div>
+                <div class="event-card">
+                    <div class="date">📅 Wednesday, 16th September 2026 · 10:00 AM - 1:00 PM</div>
+                    <h4>🌾 Moding Farmers & Small Traders Town Hall</h4>
+                    <p>Moding Baptist Church Hall (Moding Sub-location) · ~600 Expected</p>
+                    <p style="font-size:0.85rem; color:#5f5a55;">Interactive session addressing cassava price stabilization, fertilizer distribution logistics, and the Moding water borehole plan.</p>
+                    <p class="coordinator">Coordinator: Grace</p>
+                    <button class="btn btn-primary" style="margin-top: 10px; padding: 8px 20px; font-size: 0.8rem;">Attend Event →</button>
+                </div>
+                <div class="event-card">
+                    <div class="date">📅 Sunday, 20th September 2026 · 2:00 PM - 6:00 PM</div>
+                    <h4>⚽ Swaleh Chemasuet Youth Peace & Talent Cup Finals</h4>
+                    <p>Kakurikit Sports Grounds (Ang'urai Sub-location) · ~2,000 Expected</p>
+                    <p style="font-size:0.85rem; color:#5f5a55;">Ward football and netball finals between Moding Stars vs. Ang'urai FC. Presentation of sports kits, trophies, and youth fund mentorship.</p>
+                    <p class="coordinator">Coordinator: Brian</p>
+                    <button class="btn btn-primary" style="margin-top: 10px; padding: 8px 20px; font-size: 0.8rem;">Attend Event →</button>
+                </div>
+                <div class="event-card">
+                    <div class="date">📅 Thursday, 24th September 2026 · 2:00 PM - 5:00 PM</div>
+                    <h4>👩‍💼 Kolanya & Aboloi Women's Table-Banking Summit</h4>
+                    <p>St. Monica Kolanya Social Hall (Aboloi / Kolanya) · ~450 Expected</p>
+                    <p style="font-size:0.85rem; color:#5f5a55;">Empowerment session with 25 women self-help groups on accessing the Ward Revolving Credit Fund and maternal health support.</p>
+                    <p class="coordinator">Coordinator: Everlyne</p>
+                    <button class="btn btn-primary" style="margin-top: 10px; padding: 8px 20px; font-size: 0.8rem;">Attend Event →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMIN DASHBOARD -->
+    <section id="admin-section" style="background: #faf7f4; display: none;">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <div class="kicker">⚡ Campaign HQ</div>
+                    <h2>Admin Dashboard</h2>
+                </div>
+                <p>Manage blog posts, view donations, volunteers, voter pledges & issues.</p>
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 16px;">
+                <button onclick="logoutAdmin()" class="btn btn-danger">🚪 Logout</button>
+            </div>
+            <div class="admin-grid">
+                <div class="admin-panel">
+                    <h3>📝 Manage Blog Posts</h3>
+                    <form id="blogForm" onsubmit="saveBlogPost(event)">
+                        <input type="text" id="postTitle" placeholder="Post title" required>
+                        <textarea id="postContent" placeholder="Content..." required></textarea>
+                        <input type="text" id="postImage" placeholder="Image filename (e.g., photo.jpg)">
+                        <input type="text" id="postTag" placeholder="Tag (e.g., Agriculture)">
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">➕ Add / Update Post</button>
+                    </form>
+                    <div style="margin-top:16px;">
+                        <h4>Existing Posts</h4>
+                        <div id="adminPostList" class="admin-list"></div>
+                        <button onclick="clearAllPosts()" style="margin-top:10px;background:#ce1126;color:white;border:none;padding:6px 16px;border-radius:40px;cursor:pointer;">🗑️ Clear All</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="admin-panel">
+                        <h3>💰 Recent Donations</h3>
+                        <div id="donationList" class="admin-list"><li style="color:#888;">No donations yet</li></div>
+                    </div>
+                    <div class="admin-panel" style="margin-top:20px;">
+                        <h3>🤝 Volunteers</h3>
+                        <div id="volunteerList" class="admin-list"><li style="color:#888;">No volunteers yet</li></div>
+                    </div>
+                    <div class="admin-panel" style="margin-top:20px;">
+                        <h3>🗳️ Voter Pledges</h3>
+                        <div id="pledgeList" class="admin-list"><li style="color:#888;">No pledges yet</li></div>
+                    </div>
+                    <div class="admin-panel" style="margin-top:20px;">
+                        <h3>📌 Issues Logged</h3>
+                        <div id="adminIssueList" class="admin-list"><li style="color:#888;">No issues logged</li></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- about -->
-    <section id="about">
+    <section id="about" style="background: white;">
         <div class="container about">
-            <div class="about-logo">
-                <img src="swaleh main picture.jpg" alt="Swaleh Chemasuet" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22%23ce1126%22/><text x=%2235%22 y=%22120%22 fill=%22white%22 font-size=%2260%22>SC</text></svg>'">
-            </div>
+            <div class="about-logo"><img src="swaleh main picture.jpg" alt="Swaleh Chemasuet" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22%23ce1126%22/><text x=%2235%22 y=%22120%22 fill=%22white%22 font-size=%2260%22>SC</text></svg>'"></div>
             <div class="about-content">
                 <div class="kicker" style="color:var(--odm-red);text-transform:uppercase;letter-spacing:0.12em;font-size:0.7rem;font-weight:800;">Who is Swaleh?</div>
                 <h2>A leader rooted in community</h2>
                 <p>Swaleh Chemasuet is a community mobilizer, youth leader, and a proud ODM member. He has spent years working with farmers, women groups, and youth forums in Ang'urai East. His vision is to bridge the gap between the people and the county government, ensuring that resources are used transparently and effectively.</p>
-                <p>As a first-time candidate, Swaleh brings fresh energy, a listening ear, and a commitment to servant leadership. He believes in the ODM philosophy of <strong>"Inclusivity, Integrity, and Development"</strong>.</p>
+                <p>His manifesto, <strong>"Edeke Eremit — Maendeleo kwa Wote"</strong>, is built on 6 pillars of transformation covering agriculture, infrastructure, education, healthcare, youth/women empowerment, and accountable governance.</p>
+                <p style="font-style: italic; color: var(--odm-dark);">"I give my word to the mothers of Moding, the farmers of Kakurikit, the youth of Ang'urai, and the elders of Kolanya: every shilling meant for this pillar will be accounted for down to the last cent."</p>
                 <div class="about-grid">
-                    <div class="about-box"><strong>✅ ODM candidate</strong><span>Ang'urai East MCA 2026</span></div>
+                    <div class="about-box"><strong>✅ ODM candidate</strong><span>Ang'urai East MCA 2027</span></div>
                     <div class="about-box"><strong>🌟 Vision</strong><span>Prosperous, united ward</span></div>
-                    <div class="about-box"><strong>📢 Motto</strong><span>Service above self</span></div>
+                    <div class="about-box"><strong>📢 Motto</strong><span>Edeke Eremit</span></div>
                     <div class="about-box"><strong>🤝 Focus</strong><span>Youth, women & farmers</span></div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- cta -->
+
+    <!-- cta / contact -->
     <section class="cta-section" id="contact">
         <div class="container">
             <div class="cta-box">
@@ -898,15 +1866,16 @@
                         <button type="submit" class="btn btn-primary">Subscribe →</button>
                     </form>
                     <div class="contact-info">
+                        <a href="tel:0722862749">📞 0722 849 110</a>
                         <a href="tel:0728682749">📞 0728 682 749</a>
-                        <a href="tel:0182095270">📞 0182 095 270</a>
-                        <a href="mailto:swaleh@anguraieast.org">✉️ Email Swaleh</a>
+                        <a href="mailto:swaleh.chemasuet.anguraieast@gmail.com">✉️ Email Swaleh</a>
                     </div>
                 </div>
-                <a class="btn btn-primary" href="tel:0728682749" style="flex-shrink:0;">Call Swaleh →</a>
+                <a class="btn btn-primary" href="tel:0722862749" style="flex-shrink:0;">Call Swaleh →</a>
             </div>
         </div>
     </section>
+
     <!-- footer -->
     <footer>
         <div class="container">
@@ -916,7 +1885,8 @@
                         <img src="swaleh main picture.jpg" alt="Swaleh" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23ce1126%22/><text x=%2220%22 y=%2265%22 fill=%22white%22 font-size=%2230%22>SC</text></svg>'">
                         <div><strong>Swaleh Chemasuet</strong><small>Ang'urai East MCA candidate</small></div>
                     </div>
-                    <p>A people-driven campaign rooted in ODM values. Let's unite for progress.</p>
+                    <p>A people-driven campaign rooted in ODM values. Let's unite for progress. <strong>#EdekeEremit</strong></p>
+                    <p style="font-size:0.8rem; color:#888;">Authorized by Campaign Secretariat Ang'urai East Ward, Teso North. Busia County Assembly 2027</p>
                     <div class="footer-social">
                         <a href="#">🐦</a>
                         <a href="#">📘</a>
@@ -924,13 +1894,14 @@
                         <a href="#">▶️</a>
                     </div>
                 </div>
-                <div><h3>Quick links</h3><ul><li><a href="#stories">Updates</a></li><li><a href="#impact">Agenda</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">Profile</a></li></ul></div>
-                <div><h3>Contact</h3><ul><li>📞 0728 682 749</li><li>📞 0182 095 270</li><li>📍 Ang'urai East, Busia</li><li>🇰🇪 ODM · Kenya</li></ul></div>
+                <div><h3>Quick links</h3><ul><li><a href="#manifesto">6 Pillars</a></li><li><a href="#polling">Polling</a></li><li><a href="#donate">Donate</a></li><li><a href="#volunteer">Volunteer</a></li><li><a href="#issues">Issues</a></li><li><a href="#events">Events</a></li></ul></div>
+                <div><h3>Contact</h3><ul><li>📞 0722 849 110</li><li>📞 0728 682 749</li><li>📍 Ang'urai East, Busia</li><li>🇰🇪 ODM · Kenya</li><li>📧 swaleh.chemasuet.anguraieast@gmail.com</li><li>🏛️ Busia County Assembly 040</li></ul></div>
             </div>
-            <div class="footer-bottom"><span>© <span id="year"></span> Swaleh Chemasuet · Ang'urai East</span><span>Built with ❤️ for the people</span></div>
+            <div class="footer-bottom"><span>© <span id="year"></span> Hon. Swaleh Chemasuet · Ang'urai East</span><span>Built with ❤️ for the people · #EdekeEremit</span></div>
         </div>
     </footer>
-    <!-- modal -->
+
+    <!-- modal for articles -->
     <div class="modal" id="articleModal" onclick="closeArticle(event)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <div class="modal-image">
@@ -950,183 +1921,409 @@
             </div>
         </div>
     </div>
-    <script>
-        // ===== DATA =====
-        const DEFAULT_STORIES = [
-            { 
-                title: 'Harvesting improved Kanga groundnuts', 
-                content: 'Today marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers. This is a big step towards food security and income generation. The community came together to celebrate this achievement, and we are already planning to expand the program to more farmers in the region.', 
-                tag: 'Agriculture', 
-                image: 'oday marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers.1' 
-            },
-            { 
-                title: 'Stakeholders meeting at Aloete Dispensary', 
-                content: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location. We discussed healthcare delivery, staffing, and medical supplies. The community raised important concerns about the need for a maternity wing and 24-hour ambulance services. We are committed to addressing these issues.', 
-                tag: 'Health', 
-                image: 'On Tuesday 15th July 2026, I attended a stakeholders\' meeting at Aloete Dispensary in Kolanya Location.jpg' 
-            },
-            { 
-                title: 'Public baraza at Changara Health Centre', 
-                content: 'Public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division. We tackled water, roads, and security issues. Residents expressed their concerns about the poor state of roads and the need for clean water. We are working with the county government to find solutions.', 
-                tag: 'Community', 
-                image: 'public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division.' 
-            },
-            { 
-                title: 'Zero-grazing dairy unit visit', 
-                content: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara. We discussed milk production, market linkages, and the importance of quality animal feeds. The farmer shared his success story and encouraged others to adopt this model.', 
-                tag: 'Agriculture', 
-                image: 'I visited one of our local zero-grazing dairy units, a clear demonstration that modern farming is the future of agriculture in Changara.1' 
-            }
-        ];
-        const STORAGE_KEY = 'swaleh_posts';
-        function getPosts() { 
-            try { 
-                const d = localStorage.getItem(STORAGE_KEY); 
-                if (d) { 
-                    const p = JSON.parse(d); 
-                    return p.length ? p : DEFAULT_STORIES; 
-                } 
-            } catch(e) { console.log('Error loading posts:', e); } 
-            return DEFAULT_STORIES; 
-        }
-        function savePosts(p) { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }
 
-        // ===== RENDER STORIES =====
+    <script>
+        // ========== ADMIN AUTH ==========
+        const ADMIN_CREDENTIALS = { username: 'admin', password: 'swaleh2027' };
+        let isAdminLoggedIn = false;
+
+        function showAdminLogin() {
+            document.getElementById('loginOverlay').classList.add('show');
+            document.getElementById('loginError').style.display = 'none';
+        }
+
+        function closeLogin() {
+            document.getElementById('loginOverlay').classList.remove('show');
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const user = document.getElementById('adminUser').value.trim();
+            const pass = document.getElementById('adminPass').value.trim();
+            if (user === ADMIN_CREDENTIALS.username && pass === ADMIN_CREDENTIALS.password) {
+                isAdminLoggedIn = true;
+                try { sessionStorage.setItem('swaleh_admin', 'true'); } catch (e) {}
+                closeLogin();
+                document.getElementById('admin-section').style.display = 'block';
+                renderAdminPostList();
+                renderDonationList();
+                renderVolunteerList();
+                renderPledgeList();
+                renderAdminIssueList();
+                document.getElementById('admin-section').scrollIntoView({ behavior: 'smooth' });
+                const adminLink = document.querySelector('a[href="#admin-section"]');
+                if (adminLink) {
+                    adminLink.innerHTML = 'Admin <span class="admin-badge" style="background:#4CAF50;">✅</span>';
+                }
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+            return false;
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            try { sessionStorage.removeItem('swaleh_admin'); } catch (e) {}
+            document.getElementById('admin-section').style.display = 'none';
+            const adminLink = document.querySelector('a[href="#admin-section"]');
+            if (adminLink) {
+                adminLink.innerHTML = 'Admin <span class="admin-badge">🔒</span>';
+            }
+            alert('🔒 Logged out successfully.');
+        }
+
+        // ========== DATA STORE ==========
+        const STORAGE = {
+            posts: 'swaleh_posts',
+            donations: 'swaleh_donations',
+            volunteers: 'swaleh_volunteers',
+            pledges: 'swaleh_pledges',
+            issues: 'swaleh_issues'
+        };
+
+        function getPosts() { try { const d = localStorage.getItem(STORAGE.posts); return d ? JSON.parse(d) : []; } catch { return []; } }
+
+        function savePosts(p) { localStorage.setItem(STORAGE.posts, JSON.stringify(p)); }
+
+        function getDonations() { try { const d = localStorage.getItem(STORAGE.donations); return d ? JSON.parse(d) : []; } catch { return []; } }
+
+        function saveDonations(d) { localStorage.setItem(STORAGE.donations, JSON.stringify(d)); }
+
+        function getVolunteers() { try { const d = localStorage.getItem(STORAGE.volunteers); return d ? JSON.parse(d) : []; } catch { return []; } }
+
+        function saveVolunteers(v) { localStorage.setItem(STORAGE.volunteers, JSON.stringify(v)); }
+
+        function getPledges() { try { const d = localStorage.getItem(STORAGE.pledges); return d ? JSON.parse(d) : []; } catch { return []; } }
+
+        function savePledges(p) { localStorage.setItem(STORAGE.pledges, JSON.stringify(p)); }
+
+        function getIssues() { try { const d = localStorage.getItem(STORAGE.issues); return d ? JSON.parse(d) : []; } catch { return []; } }
+
+        function saveIssues(i) { localStorage.setItem(STORAGE.issues, JSON.stringify(i)); }
+
+        // Seed default posts
+        if (getPosts().length === 0) {
+            const defaults = [
+                { title: 'Harvesting improved Kanga groundnuts in Ang\'urai', content: 'Today we began harvesting the improved Kanga groundnut variety. This marks a major step for food security and agricultural transformation in Ang\'urai East. Farmers are excited about the high yields and market potential.', tag: 'Agriculture', image: 'swaleh main picture.jpg' },
+                { title: 'Stakeholders meeting at Aloete Dispensary', content: 'Discussed healthcare delivery, staffing, and medical supplies. Community raised concerns about the maternity wing. We are committed to equipping our health centers with the necessary resources.', tag: 'Health', image: 'swaleh main picture.jpg' },
+                { title: 'Public baraza at Changara Health Centre', content: 'Addressed water, roads, and security issues. Working with county government for solutions. The community spoke strongly about the need for clean water and better road infrastructure.', tag: 'Community', image: 'swaleh main picture.jpg' },
+                { title: 'Youth Peace & Talent Cup Preparations', content: 'Preparations are underway for the Swaleh Chemasuet Youth Peace & Talent Cup finals at Kakurikit Sports Grounds. This tournament brings together youth from across the ward for sports and mentorship.', tag: 'Youth', image: 'swaleh main picture.jpg' }
+            ];
+            savePosts(defaults);
+        }
+
+        // Seed default issues
+        if (getIssues().length === 0) {
+            const defaults = [
+                { name: 'Community Member', phone: '0712 345 678', location: 'Moding Sub-location', village: 'Katelenyang', category: 'Roads & Bridges', urgency: 'Critical',
+                    desc: 'The bridge culvert near Katelenyang dispensary overflows completely during rains, preventing children from accessing school. This affects over 200 families.', date: new Date().toLocaleString() },
+                { name: 'Community Member', phone: '0721 987 654', location: 'Ang\'urai Sub-location', village: 'Kakurikit', category: 'Clean Water & Boreholes', urgency: 'Critical',
+                    desc: 'The community borehole pump handle is broken. Over 180 families are fetching water from the muddy stream. This is a health emergency.', date: new Date().toLocaleString() }
+            ];
+            saveIssues(defaults);
+        }
+
+        // ========== RENDER BLOG ==========
         function renderWebsiteStories() {
             const posts = getPosts();
             const grid = document.getElementById('storiesGrid');
             if (!grid) return;
-            
+            if (posts.length === 0) { grid.innerHTML = '<p style="color:#888;grid-column:1/-1;text-align:center;">No posts yet. Admin can add updates.</p>'; return; }
             grid.innerHTML = posts.map((post, i) => {
                 const imgSrc = post.image && post.image.trim() !== '' ? post.image : 'swaleh main picture.jpg';
-                return `
-                <article class="card">
-                    <div class="card-image">
-                        <img src="${imgSrc}" alt="${post.title}" onerror="this.src='swaleh main picture.jpg'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag">${post.tag || 'Update'}</span>
-                        <h3>${post.title}</h3>
-                        <p>${post.content.substring(0,120)}${post.content.length>120?'...':''}</p>
-                        <a class="card-link" href="#" onclick="openArticle(event, ${i})">Read more →</a>
-                        <div class="share-buttons">
-                            <a href="#" class="share-btn twitter" onclick="shareStory('Twitter','${post.title.replace(/'/g, "\\'")}')">🐦 Tweet</a>
-                            <a href="#" class="share-btn facebook" onclick="shareStory('Facebook','${post.title.replace(/'/g, "\\'")}')">📘 Share</a>
-                            <a href="#" class="share-btn whatsapp" onclick="shareStory('WhatsApp','${post.title.replace(/'/g, "\\'")}')">💬 WhatsApp</a>
-                        </div>
-                    </div>
-                </article>
-            `}).join('');
+                return `<article class="card"><div class="card-image"><img src="${imgSrc}" alt="${post.title}" onerror="this.src='swaleh main picture.jpg'"></div><div class="card-body"><span class="card-tag">${post.tag || 'Update'}</span><h3>${post.title}</h3><p>${post.content.substring(0, 120)}${post.content.length > 120 ? '...' : ''}</p><a class="card-link" href="#" onclick="openArticle(event, ${i})">Read more →</a><div class="share-buttons"><a href="#" class="share-btn twitter" onclick="shareStory('Twitter','${post.title.replace(/'/g, "\\'")}')">🐦 Tweet</a><a href="#" class="share-btn facebook" onclick="shareStory('Facebook','${post.title.replace(/'/g, "\\'")}')">📘 Share</a><a href="#" class="share-btn whatsapp" onclick="shareStory('WhatsApp','${post.title.replace(/'/g, "\\'")}')">💬 WhatsApp</a></div></div></article>`;
+            }).join('');
         }
 
-        // ===== GALLERY =====
+        // ========== GALLERY ==========
         const GALLERY_IMAGES = [
             { src: 'swaleh main picture.jpg', caption: '⚡ Swaleh Chemasuet' },
             { src: 'agriculture.jpg', caption: '🌾 Agriculture in Ang\'urai' },
             { src: 'agriculture 2.jpg', caption: '🌱 Farming initiatives' },
             { src: 'agriculture 3.jpg', caption: '🚜 Modern farming' },
             { src: 'brothers and my sons in the shamba.jpg', caption: '👨‍🌾 Family in the shamba' },
-            { src: 'Busia County women representing Hon. Catherine Wamayo, during her working tour of Teso North Sub-County.jpg', caption: '👩‍💼 Women leaders in Busia' },
-            { src: 'I had the honour of attending the 80th Annual General Meeting (AGM) of S.A. Kolanya Boys\' Senior School.jpg', caption: '🎓 Kolanya Boys AGM' },
-            { src: 'I joined family, friends, leaders, and residents of Elalai arena during a fundraising in support of the burial arrangements for the late CPL Moses Kimatwai Simatwa..jpg', caption: '🤝 Fundraising at Elalai' },
-            { src: 'I joined the Catholic faithful of Machakha in a momentous occasion as we welcomed a priest to the newly established Machakha Parish.jpg', caption: '⛪ Machakha Parish' },
-            { src: 'I supervised the installation of spotlights at Changara Market, an important initiative sponsored by H.E. Dr. Arthur Odera, Deputy Governor of Busia County.latest', caption: '💡 Spotlights at Changara' },
-            { src: 'oday I attended a meeting of Changara Community Welfare Association  to discuss  how can  Association diversify its operations in the future', caption: '🤝 Changara Welfare Association' },
-            { src: 'oday marks an exciting milestone as we begin harvesting the improved Kanga groundnut variety that was introduced to our farmers.1', caption: '🌾 Kanga groundnut harvest' },
-            { src: 'odm supporter.jpg', caption: '🔴 ODM supporters' },
-            { src: 'odm.jpg', caption: '🟡 ODM party spirit' },
-            { src: 'public baraza at Changara Health Centre under the leadership of the Assistant County Commissioner for Changara Division, Bwana Mohammed Gumo..jpg', caption: '🏛️ Public baraza Changara' },
-            { src: 'Today i was honored to attend the fundraising at Changara, Koitamer Area, Clan Komolo in support of the burial of the Late Benjamin Imaan of Komolo Clan', caption: '🕊️ Fundraising at Koitamer' },
-            { src: 'Today, I had a productive engagement with the Changara ACC stage Bodaboda where we discussed issues affecting the sector and the important role bodaboda operators play in our community\'s development.', caption: '🛵 Bodaboda engagement' }
+            { src: 'Busia County women representing Hon. Catherine Wamayo, during her working tour of Teso North Sub-County.jpg', caption: '👩‍💼 Women leaders in Busia' }
         ];
 
         function renderGallery() {
             const grid = document.getElementById('galleryGrid');
             if (!grid) return;
-            const selected = GALLERY_IMAGES.slice(0, 6);
-            grid.innerHTML = selected.map((item, idx) => `
-                <div class="gallery-item ${idx === 0 ? 'featured' : ''}">
-                    <img src="${item.src}" alt="${item.caption}" onerror="this.src='swaleh main picture.jpg'">
-                    <div class="gallery-caption">${item.caption}</div>
-                </div>
-            `).join('');
+            grid.innerHTML = GALLERY_IMAGES.slice(0, 6).map((item, idx) =>
+                `<div class="gallery-item ${idx === 0 ? 'featured' : ''}"><img src="${item.src}" alt="${item.caption}" onerror="this.src='swaleh main picture.jpg'"><div class="gallery-caption">${item.caption}</div></div>`
+            ).join('');
         }
 
-        // ===== MODAL FUNCTIONS =====
+        // ========== ARTICLE MODAL ==========
         let currentArticleIndex = 0;
-        
+
         function openArticle(e, index) {
             e.preventDefault();
             const posts = getPosts();
             const post = posts[index];
             if (!post) return;
-            
             currentArticleIndex = index;
-            
-            // Set modal content
-            const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalText = document.getElementById('modalText');
-            const modalTag = document.getElementById('modalTag');
-            
-            // Use the post's image or fallback
-            const imgSrc = post.image && post.image.trim() !== '' ? post.image : 'swaleh main picture.jpg';
-            modalImage.src = imgSrc;
-            modalImage.alt = post.title;
-            modalTitle.textContent = post.title;
-            modalText.textContent = post.content;
-            modalTag.textContent = post.tag || 'Story';
-            
-            // Show modal
+            document.getElementById('modalImage').src = (post.image && post.image.trim() !== '') ? post.image : 'swaleh main picture.jpg';
+            document.getElementById('modalTitle').textContent = post.title;
+            document.getElementById('modalText').textContent = post.content;
+            document.getElementById('modalTag').textContent = post.tag || 'Story';
             document.getElementById('articleModal').classList.add('show');
             document.body.style.overflow = 'hidden';
         }
 
-        function closeArticle(e) {
-            if (e && e.target && e.target !== e.currentTarget) return;
+        function closeArticle(e) { if (e && e.target && e.target !== e.currentTarget) return;
             document.getElementById('articleModal').classList.remove('show');
-            document.body.style.overflow = '';
-        }
+            document.body.style.overflow = ''; }
 
-        // ===== SHARE FUNCTIONS =====
         function shareStory(platform, title) {
             const url = window.location.href;
-            const text = `🚀 ${title} · Swaleh Chemasuet for Ang'urai East MCA 2026 #ODM`;
+            const text = `🚀 ${title} · Swaleh Chemasuet for Ang'urai East MCA 2027 #ODM #EdekeEremit`;
             let shareUrl = '';
-            if (platform === 'Twitter') {
-                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-            } else if (platform === 'Facebook') {
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
-            } else if (platform === 'WhatsApp') {
-                shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
-            }
-            if (shareUrl) {
-                window.open(shareUrl, '_blank', 'width=600,height=500');
-            }
+            if (platform === 'Twitter') shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+            else if (platform === 'Facebook') shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+            else if (platform === 'WhatsApp') shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+            if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=500');
             return false;
         }
 
-        function shareModal(platform) {
+        function shareModal(platform) { const posts = getPosts(); const post = posts[currentArticleIndex]; if (post) shareStory(platform, post.title); return false; }
+
+        // ========== ADMIN FUNCTIONS ==========
+        function renderAdminPostList() {
+            const list = document.getElementById('adminPostList');
+            if (!list) return;
             const posts = getPosts();
-            const post = posts[currentArticleIndex];
-            if (post) {
-                shareStory(platform, post.title);
+            if (posts.length === 0) { list.innerHTML = '<li style="color:#888;">No posts</li>'; return; }
+            list.innerHTML = posts.map((p, i) => `<li><span>${p.title}</span><span><button onclick="deletePost(${i})" style="background:var(--odm-red);color:white;border:none;border-radius:30px;padding:2px 12px;cursor:pointer;">✕</button></span></li>`).join('');
+        }
+
+        function deletePost(index) {
+            if (!confirm('Delete this post?')) return;
+            const posts = getPosts();
+            posts.splice(index, 1);
+            savePosts(posts);
+            renderAdminPostList();
+            renderWebsiteStories();
+        }
+
+        function clearAllPosts() {
+            if (!confirm('Delete ALL posts?')) return;
+            savePosts([]);
+            renderAdminPostList();
+            renderWebsiteStories();
+        }
+
+        function saveBlogPost(e) {
+            e.preventDefault();
+            const title = document.getElementById('postTitle').value.trim();
+            const content = document.getElementById('postContent').value.trim();
+            const image = document.getElementById('postImage').value.trim();
+            const tag = document.getElementById('postTag').value.trim();
+            if (!title || !content) return alert('Title and content required.');
+            const posts = getPosts();
+            posts.push({ title, content, image: image || 'swaleh main picture.jpg', tag: tag || 'Update' });
+            savePosts(posts);
+            e.target.reset();
+            renderAdminPostList();
+            renderWebsiteStories();
+            alert('✅ Post added!');
+        }
+
+        // Donations
+        function renderDonationList() {
+            const list = document.getElementById('donationList');
+            if (!list) return;
+            const donations = getDonations();
+            if (donations.length === 0) { list.innerHTML = '<li style="color:#888;">No donations yet</li>'; return; }
+            list.innerHTML = donations.slice().reverse().map(d => `<li><span>${d.name || d.phone}</span><span>KSh ${d.amount} · ${d.date}</span></li>`).join('');
+        }
+
+        // Volunteers
+        function renderVolunteerList() {
+            const list = document.getElementById('volunteerList');
+            if (!list) return;
+            const volunteers = getVolunteers();
+            if (volunteers.length === 0) { list.innerHTML = '<li style="color:#888;">No volunteers yet</li>'; return; }
+            list.innerHTML = volunteers.slice().reverse().map(v => `<li><span>${v.name}</span><span>${v.role || v.interest} · ${v.date}</span></li>`).join('');
+        }
+
+        // Pledges
+        function renderPledgeList() {
+            const list = document.getElementById('pledgeList');
+            if (!list) return;
+            const pledges = getPledges();
+            if (pledges.length === 0) { list.innerHTML = '<li style="color:#888;">No pledges yet</li>'; return; }
+            list.innerHTML = pledges.slice().reverse().map(p => `<li><span>${p.name}</span><span>${p.station} · ${p.date}</span></li>`).join('');
+        }
+
+        // Issues (admin)
+        function renderAdminIssueList() {
+            const list = document.getElementById('adminIssueList');
+            if (!list) return;
+            const issues = getIssues();
+            if (issues.length === 0) { list.innerHTML = '<li style="color:#888;">No issues logged</li>'; return; }
+            list.innerHTML = issues.slice().reverse().map((iss, i) =>
+                `<li><span>${iss.category}</span><span>${iss.urgency} · <button onclick="deleteIssue(${i})" style="background:var(--odm-red);color:white;border:none;border-radius:30px;padding:2px 12px;cursor:pointer;">✕</button></span></li>`
+            ).join('');
+        }
+
+        function deleteIssue(index) {
+            if (!confirm('Delete this issue?')) return;
+            const issues = getIssues();
+            issues.splice(index, 1);
+            saveIssues(issues);
+            renderAdminIssueList();
+            renderIssueList();
+        }
+
+        // ========== STK PUSH ==========
+        function processSTK(e) {
+            e.preventDefault();
+            const name = document.getElementById('donorName').value.trim();
+            const phone = document.getElementById('phoneInput').value.trim();
+            const amount = parseInt(document.getElementById('amountInput').value);
+            const purpose = document.getElementById('donationPurpose').value;
+            const message = document.getElementById('donorMessage').value.trim();
+            const anonymous = document.getElementById('anonymousDonation').checked;
+            if (!name || !phone || !amount || amount < 10) return alert('Enter valid name, phone and amount (min 10 KSh).');
+            const status = document.getElementById('stkStatus');
+            status.textContent = '⏳ Sending STK push...';
+            setTimeout(() => {
+                const donation = {
+                    name: anonymous ? 'Anonymous Supporter' : name,
+                    phone: phone,
+                    amount: amount,
+                    purpose: purpose,
+                    message: message,
+                    date: new Date().toLocaleString(),
+                    status: 'Completed (simulated)'
+                };
+                const donations = getDonations();
+                donations.push(donation);
+                saveDonations(donations);
+                status.innerHTML = `✅ STK Push sent to ${phone} for KSh ${amount}. (Demo)`;
+                renderDonationList();
+                updateContributorList();
+                document.getElementById('donorName').value = '';
+                document.getElementById('phoneInput').value = '';
+                document.getElementById('amountInput').value = '500';
+                document.getElementById('donorMessage').value = '';
+                document.getElementById('anonymousDonation').checked = false;
+                document.getElementById('displayAmount').textContent = '500';
+            }, 1500);
+        }
+
+        function updateContributorList() {
+            const donations = getDonations();
+            const list = document.getElementById('contributorList');
+            if (!list) return;
+            if (donations.length === 0) {
+                list.innerHTML = '<div style="color:#888; text-align:center; padding:20px;">No contributions yet</div>';
+                return;
             }
-            return false;
+            list.innerHTML = donations.slice().reverse().slice(0, 10).map(d =>
+                `<div class="contributor-item"><span>${d.name || d.phone}</span><span>KES ${d.amount} · ${d.date}</span></div>`
+            ).join('');
         }
 
-        // ===== NAVIGATION =====
-        function toggleMenu() { 
-            const menu = document.getElementById('mainMenu');
-            if (menu) menu.classList.toggle('open');
-        }
-        
-        function closeMenu() { 
-            const menu = document.getElementById('mainMenu');
-            if (menu) menu.classList.remove('open');
+        function donateAmount(amount) {
+            document.getElementById('amountInput').value = amount;
+            document.getElementById('displayAmount').textContent = amount;
+            document.getElementById('donate').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => { document.getElementById('donorName').focus(); }, 500);
         }
 
-        // ===== NEWSLETTER =====
+        // Update display amount on input change
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountInput = document.getElementById('amountInput');
+            if (amountInput) {
+                amountInput.addEventListener('input', function() {
+                    document.getElementById('displayAmount').textContent = this.value || '0';
+                });
+            }
+        });
+
+        // ========== VOLUNTEER ==========
+        function submitVolunteer(e) {
+            e.preventDefault();
+            const name = document.getElementById('volName').value.trim();
+            const email = document.getElementById('volEmail').value.trim();
+            const phone = document.getElementById('volPhone').value.trim();
+            const whatsapp = document.getElementById('volWhatsApp').value.trim();
+            const location = document.getElementById('volLocation').value;
+            const village = document.getElementById('volVillage').value.trim();
+            const role = document.getElementById('volRole').value;
+            const availability = document.getElementById('volAvailability').value;
+            const size = document.getElementById('volSize').value;
+            const message = document.getElementById('volMessage').value.trim();
+            if (!name || !phone || !location || !village || !role) return alert('Please fill all required fields.');
+            const volunteer = { name, email, phone, whatsapp, location, village, role, availability, size, message, date: new Date().toLocaleString() };
+            const volunteers = getVolunteers();
+            volunteers.push(volunteer);
+            saveVolunteers(volunteers);
+            renderVolunteerList();
+            e.target.reset();
+            alert(`✅ Thank you ${name}! You are now registered as a volunteer. Your official pass will be generated.`);
+        }
+
+        // ========== VOTER PLEDGE ==========
+        function submitVoterPledge(e) {
+            e.preventDefault();
+            const name = document.getElementById('pledgeName').value.trim();
+            const phone = document.getElementById('pledgePhone').value.trim();
+            const village = document.getElementById('pledgeVillage').value.trim();
+            const station = document.getElementById('pledgeStation').value;
+            const reason = document.getElementById('pledgeReason').value.trim();
+            if (!name || !phone || !village || !station) return alert('Please fill all required fields.');
+            const pledge = { name, phone, village, station, reason, date: new Date().toLocaleString() };
+            const pledges = getPledges();
+            pledges.push(pledge);
+            savePledges(pledges);
+            renderPledgeList();
+            e.target.reset();
+            alert(`✅ Thank you ${name}! Your pledge has been recorded. #EdekeEremit`);
+        }
+
+        // ========== ISSUES ==========
+        function submitIssue(e) {
+            e.preventDefault();
+            const name = document.getElementById('issueName').value.trim();
+            const phone = document.getElementById('issuePhone').value.trim();
+            const location = document.getElementById('issueLocation').value;
+            const village = document.getElementById('issueVillage').value.trim();
+            const category = document.getElementById('issueCategory').value;
+            const urgency = document.getElementById('issueUrgency').value;
+            const desc = document.getElementById('issueDesc').value.trim();
+            if (!name || !phone || !location || !category || !urgency || !desc) return alert('Please fill all required fields.');
+            const issue = { name, phone, location, village, category, urgency, desc, date: new Date().toLocaleString() };
+            const issues = getIssues();
+            issues.push(issue);
+            saveIssues(issues);
+            renderIssueList();
+            renderAdminIssueList();
+            e.target.reset();
+            alert('✅ Your priority has been submitted and will be reviewed by the candidate.');
+        }
+
+        function renderIssueList() {
+            const list = document.getElementById('issueList');
+            if (!list) return;
+            const issues = getIssues();
+            if (issues.length === 0) { list.innerHTML = '<li style="color:#888;">No issues logged</li>'; return; }
+            list.innerHTML = issues.slice().reverse().map(iss =>
+                `<div class="issue-card ${iss.urgency === 'Critical' ? 'critical' : ''}">
+                    <h4 style="color:var(--odm-dark);">${iss.category}</h4>
+                    <p style="font-size:0.85rem;color:#5f5a55;">${iss.desc.substring(0, 100)}${iss.desc.length > 100 ? '...' : ''}</p>
+                    <p style="font-size:0.75rem;color:#888;margin-top:6px;">${iss.location} · ${iss.urgency} · ${iss.date}</p>
+                </div>`
+            ).join('');
+        }
+
+        // ========== NAV ==========
+        function toggleMenu() { document.getElementById('mainMenu').classList.toggle('open'); }
+
+        function closeMenu() { document.getElementById('mainMenu').classList.remove('open'); }
+
+        // ========== NEWSLETTER ==========
         function subscribeNewsletter(e) {
             e.preventDefault();
             const input = e.target.querySelector('input[type="email"]');
@@ -1137,20 +2334,36 @@
             return false;
         }
 
-        // ===== INIT =====
+        // ========== INIT ==========
         document.addEventListener('DOMContentLoaded', function() {
-            // Set year
-            const yearSpan = document.getElementById('year');
-            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-            
-            // Render content
+            document.getElementById('year').textContent = new Date().getFullYear();
             renderWebsiteStories();
             renderGallery();
-            
-            // Close modal on escape key
+            renderIssueList();
+            updateContributorList();
+
+            // Check admin session
+            try {
+                if (sessionStorage.getItem('swaleh_admin') === 'true') {
+                    isAdminLoggedIn = true;
+                    document.getElementById('admin-section').style.display = 'block';
+                    renderAdminPostList();
+                    renderDonationList();
+                    renderVolunteerList();
+                    renderPledgeList();
+                    renderAdminIssueList();
+                    const adminLink = document.querySelector('a[href="#admin-section"]');
+                    if (adminLink) {
+                        adminLink.innerHTML = 'Admin <span class="admin-badge" style="background:#4CAF50;">✅</span>';
+                    }
+                }
+            } catch (e) {}
+
+            // Close modal on escape
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     closeArticle(e);
+                    closeLogin();
                 }
             });
         });
